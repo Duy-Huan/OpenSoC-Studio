@@ -1,0 +1,475 @@
+{
+  "status": "PASS",
+  "project": {
+    "id": "project-c842cdc6a74e44c0",
+    "name": "Engine runtime acceptance 1792655527",
+    "created_at": "2026-10-22T07:52:07.227500+00:00",
+    "ai_policy": "NO_AI",
+    "revision": 0
+  },
+  "cases": [
+    {
+      "profile": "systemc_tlm",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-5cce6abb54f34f4a",
+      "result_file": "artifacts/runtime/runtime-5cce6abb54f34f4a/result.json",
+      "checks": {
+        "fidelity": "SYNTHETIC_TLM_INITIATOR_NOT_CPU",
+        "negative_control": false,
+        "paired_transactions": true,
+        "transaction_count": 6
+      },
+      "error": null
+    },
+    {
+      "profile": "systemc_tlm",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-ea2396aecd454765",
+      "result_file": "artifacts/runtime/runtime-ea2396aecd454765/result.json",
+      "checks": {
+        "fidelity": "SYNTHETIC_TLM_INITIATOR_NOT_CPU",
+        "negative_control": true,
+        "paired_transactions": true,
+        "transaction_count": 6
+      },
+      "error": null
+    },
+    {
+      "profile": "systemc_verilated",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-f900ae47ace147c8",
+      "result_file": "artifacts/runtime/runtime-f900ae47ace147c8/result.json",
+      "checks": {
+        "fidelity": "SYSTEMC_TLM_TO_ACTUAL_VERILATED_REGISTER",
+        "negative_control": false,
+        "paired_transactions": true,
+        "transaction_count": 6
+      },
+      "error": null
+    },
+    {
+      "profile": "systemc_verilated",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-b0dad311750c4810",
+      "result_file": "artifacts/runtime/runtime-b0dad311750c4810/result.json",
+      "checks": {
+        "fidelity": "SYSTEMC_TLM_TO_ACTUAL_VERILATED_REGISTER",
+        "negative_control": true,
+        "paired_transactions": true,
+        "transaction_count": 6
+      },
+      "error": null
+    },
+    {
+      "profile": "yosys_netlist",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-9662df7a0f5c4b51",
+      "result_file": "artifacts/runtime/runtime-9662df7a0f5c4b51/result.json",
+      "checks": {
+        "negative_control": false,
+        "rtl_vs_netlist": true,
+        "vectors": 16
+      },
+      "error": null,
+      "wellen_signals": 19
+    },
+    {
+      "profile": "yosys_netlist",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-60f9fcb0d19747fa",
+      "result_file": "artifacts/runtime/runtime-60f9fcb0d19747fa/result.json",
+      "checks": {
+        "negative_control": true,
+        "rtl_vs_netlist": true,
+        "vectors": 16
+      },
+      "error": null
+    },
+    {
+      "profile": "picorv32_icarus",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-1d1c4ca4af7c46cb",
+      "result_file": "artifacts/runtime/runtime-1d1c4ca4af7c46cb/result.json",
+      "checks": {
+        "arithmetic_vectors": 15,
+        "assembly_complete": true,
+        "assembly_names": [
+          "lui",
+          "auipc",
+          "j",
+          "jal",
+          "jalr",
+          "beq",
+          "bne",
+          "blt",
+          "bge",
+          "bltu",
+          "bgeu",
+          "lb",
+          "lh",
+          "lw",
+          "lbu",
+          "lhu",
+          "sb",
+          "sh",
+          "sw",
+          "addi",
+          "slti",
+          "xori",
+          "ori",
+          "andi",
+          "slli",
+          "srli",
+          "srai",
+          "add",
+          "sub",
+          "sll",
+          "slt",
+          "xor",
+          "srl",
+          "sra",
+          "or",
+          "and",
+          "mulh",
+          "mulhsu",
+          "mulhu",
+          "mul",
+          "div",
+          "divu",
+          "rem",
+          "remu",
+          "simple"
+        ],
+        "independent_arithmetic_correct": true,
+        "interrupt_counts": {
+          "fast external": 54,
+          "slow external": 6,
+          "timer": 22
+        },
+        "interrupts_observed": true,
+        "mmio_uart_matches_stdout": true,
+        "prime_count": 31,
+        "prime_values_correct": true,
+        "success_sentinel": true
+      },
+      "error": null,
+      "wellen_signals": 20
+    },
+    {
+      "profile": "picorv32_icarus",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-e0bc1855a09c4266",
+      "result_file": "artifacts/runtime/runtime-e0bc1855a09c4266/result.json",
+      "checks": {
+        "arithmetic_vectors": 0,
+        "assembly_complete": false,
+        "assembly_names": [],
+        "independent_arithmetic_correct": false,
+        "interrupt_counts": {},
+        "interrupts_observed": false,
+        "mmio_uart_matches_stdout": false,
+        "negative_control_detected": true,
+        "prime_count": 0,
+        "prime_values_correct": false,
+        "success_sentinel": false
+      },
+      "error": null
+    },
+    {
+      "profile": "picorv32_verilator",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-4555e1e969224643",
+      "result_file": "artifacts/runtime/runtime-4555e1e969224643/result.json",
+      "checks": {
+        "arithmetic_vectors": 15,
+        "assembly_complete": true,
+        "assembly_names": [
+          "lui",
+          "auipc",
+          "j",
+          "jal",
+          "jalr",
+          "beq",
+          "bne",
+          "blt",
+          "bge",
+          "bltu",
+          "bgeu",
+          "lb",
+          "lh",
+          "lw",
+          "lbu",
+          "lhu",
+          "sb",
+          "sh",
+          "sw",
+          "addi",
+          "slti",
+          "xori",
+          "ori",
+          "andi",
+          "slli",
+          "srli",
+          "srai",
+          "add",
+          "sub",
+          "sll",
+          "slt",
+          "xor",
+          "srl",
+          "sra",
+          "or",
+          "and",
+          "mulh",
+          "mulhsu",
+          "mulhu",
+          "mul",
+          "div",
+          "divu",
+          "rem",
+          "remu",
+          "simple"
+        ],
+        "independent_arithmetic_correct": true,
+        "interrupt_counts": {
+          "fast external": 54,
+          "slow external": 6,
+          "timer": 22
+        },
+        "interrupts_observed": true,
+        "mmio_uart_matches_stdout": true,
+        "prime_count": 31,
+        "prime_values_correct": true,
+        "success_sentinel": true
+      },
+      "error": null,
+      "wellen_signals": 502
+    },
+    {
+      "profile": "picorv32_verilator",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-dd11bf51ad784bc2",
+      "result_file": "artifacts/runtime/runtime-dd11bf51ad784bc2/result.json",
+      "checks": {
+        "arithmetic_vectors": 0,
+        "assembly_complete": false,
+        "assembly_names": [],
+        "independent_arithmetic_correct": false,
+        "interrupt_counts": {},
+        "interrupts_observed": false,
+        "mmio_uart_matches_stdout": false,
+        "negative_control_detected": true,
+        "prime_count": 0,
+        "prime_values_correct": false,
+        "success_sentinel": false
+      },
+      "error": null
+    },
+    {
+      "profile": "ibex_simple_system",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-907f9ccc580a44f6",
+      "result_file": "artifacts/runtime/runtime-907f9ccc580a44f6/result.json",
+      "checks": {
+        "fst_waveform": true,
+        "hello": "Hello simple system\nDEADBEEF\nBAADF00D\nTick!\nTock!\nTick!\nTock!\nTick!\n",
+        "instruction_trace": true,
+        "invalid_elf_rejected": false,
+        "loader_exit_zero_on_error": false,
+        "negative_control": false,
+        "source_revision": "1b29dae8866e6c0f0a3cd9dead53a77b4f45e357"
+      },
+      "error": null,
+      "wellen_signals": 4096
+    },
+    {
+      "profile": "ibex_simple_system",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-2bec3b12b4ef4868",
+      "run_id": "runtime-efb8a244d68347b1",
+      "result_file": "artifacts/runtime/runtime-efb8a244d68347b1/result.json",
+      "checks": {
+        "fst_waveform": false,
+        "hello": "",
+        "instruction_trace": false,
+        "invalid_elf_rejected": true,
+        "loader_exit_zero_on_error": true,
+        "negative_control": true,
+        "source_revision": "1b29dae8866e6c0f0a3cd9dead53a77b4f45e357"
+      },
+      "error": null
+    },
+    {
+      "profile": "gem5_riscv",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-5121e9b69cb14765",
+      "run_id": "runtime-b116581a1e944c88",
+      "result_file": "artifacts/runtime/runtime-b116581a1e944c88/result.json",
+      "checks": {
+        "cause": "exiting with last active thread context",
+        "code": 0,
+        "fidelity": "GEM5_TIMING_CPU_SYSCALL_EMULATION_NOT_RTL",
+        "negative_control": false,
+        "origin": "simulation_zero",
+        "sim_instructions": 623,
+        "simulator_sha256": "f04805e5bb9314b9dde043597be1bcecb7e96f87a6bf4a74db0853ce146f0e79",
+        "source_revision": "b9da2bfe1e21f6efa2730edd4e80e58c5d965458",
+        "stats_present": true,
+        "tick": "44461000",
+        "tick_fs": "1000"
+      },
+      "error": null
+    },
+    {
+      "profile": "gem5_riscv",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-5121e9b69cb14765",
+      "run_id": "runtime-e46fbc6497cd42ef",
+      "result_file": "artifacts/runtime/runtime-e46fbc6497cd42ef/result.json",
+      "checks": {
+        "cause": "exiting with last active thread context",
+        "code": 1,
+        "fidelity": "GEM5_TIMING_CPU_SYSCALL_EMULATION_NOT_RTL",
+        "negative_control": true,
+        "origin": "simulation_zero",
+        "sim_instructions": 624,
+        "simulator_sha256": "f04805e5bb9314b9dde043597be1bcecb7e96f87a6bf4a74db0853ce146f0e79",
+        "source_revision": "b9da2bfe1e21f6efa2730edd4e80e58c5d965458",
+        "stats_present": true,
+        "tick": "44510000",
+        "tick_fs": "1000"
+      },
+      "error": null
+    },
+    {
+      "profile": "gem5_tlm_roundtrip",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-c842cdc6a74e44c0",
+      "run_id": "runtime-a4095fee09fd4875",
+      "result_file": "artifacts/runtime/runtime-a4095fee09fd4875/result.json",
+      "checks": {
+        "bridge_monitors_match": true,
+        "cause": "exiting with last active thread context",
+        "code": 0,
+        "correlation": "DERIVED_FIFO_SINGLE_OUTSTANDING_TIMING_CPU",
+        "fidelity": "GEM5_TIMING_CPU_INTERNAL_SYSTEMC_TLM_ROUNDTRIP_NOT_RTL",
+        "negative_control": false,
+        "origin": "simulation_zero",
+        "sim_instructions": 623,
+        "simulator_sha256": "f04805e5bb9314b9dde043597be1bcecb7e96f87a6bf4a74db0853ce146f0e79",
+        "source_revision": "b9da2bfe1e21f6efa2730edd4e80e58c5d965458",
+        "stats_present": true,
+        "tick": "44297000",
+        "tick_fs": "1000",
+        "tlm_transactions": 932
+      },
+      "error": null
+    },
+    {
+      "profile": "gem5_tlm_roundtrip",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "project_id": "project-c842cdc6a74e44c0",
+      "run_id": "runtime-cfbfab6d3ed24aea",
+      "result_file": "artifacts/runtime/runtime-cfbfab6d3ed24aea/result.json",
+      "checks": {
+        "bridge_monitors_match": true,
+        "cause": "exiting with last active thread context",
+        "code": 1,
+        "correlation": "DERIVED_FIFO_SINGLE_OUTSTANDING_TIMING_CPU",
+        "fidelity": "GEM5_TIMING_CPU_INTERNAL_SYSTEMC_TLM_ROUNDTRIP_NOT_RTL",
+        "negative_control": true,
+        "origin": "simulation_zero",
+        "sim_instructions": 624,
+        "simulator_sha256": "f04805e5bb9314b9dde043597be1bcecb7e96f87a6bf4a74db0853ce146f0e79",
+        "source_revision": "b9da2bfe1e21f6efa2730edd4e80e58c5d965458",
+        "stats_present": true,
+        "tick": "44395000",
+        "tick_fs": "1000",
+        "tlm_transactions": 933
+      },
+      "error": null
+    }
+  ],
+  "attempt_history": [
+    {
+      "profile": "systemc_verilated",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "run_id": "runtime-84edd8eff6ad4046",
+      "result_file": "artifacts/runtime/runtime-84edd8eff6ad4046/result.json",
+      "checks": {
+        "fidelity": "SYSTEMC_TLM_TO_ACTUAL_VERILATED_REGISTER",
+        "negative_control": false,
+        "paired_transactions": true,
+        "transaction_count": 6
+      },
+      "error": null
+    },
+    {
+      "profile": "systemc_verilated",
+      "scenario": "negative_control",
+      "status": "COMPLETED_PASS",
+      "run_id": "runtime-3902d2bae1b5483d",
+      "result_file": "artifacts/runtime/runtime-3902d2bae1b5483d/result.json",
+      "checks": {
+        "fidelity": "SYSTEMC_TLM_TO_ACTUAL_VERILATED_REGISTER",
+        "negative_control": true,
+        "paired_transactions": true,
+        "transaction_count": 6
+      },
+      "error": null
+    },
+    {
+      "profile": "ibex_simple_system",
+      "scenario": "baseline",
+      "status": "COMPLETED_PASS",
+      "run_id": "runtime-97c3bf355b5644d3",
+      "result_file": "artifacts/runtime/runtime-97c3bf355b5644d3/result.json",
+      "checks": {
+        "fst_waveform": true,
+        "hello": "Hello simple system\nDEADBEEF\nBAADF00D\nTick!\nTock!\nTick!\nTock!\nTick!\n",
+        "instruction_trace": true,
+        "negative_control": false,
+        "source_revision": "1b29dae8866e6c0f0a3cd9dead53a77b4f45e357"
+      },
+      "error": null,
+      "wellen_signals": 4096
+    },
+    {
+      "profile": "ibex_simple_system",
+      "scenario": "negative_control",
+      "status": "COMPLETED_FAIL",
+      "run_id": "runtime-7ff096ed37eb4c52",
+      "result_file": "artifacts/runtime/runtime-7ff096ed37eb4c52/result.json",
+      "checks": {},
+      "error": "AssertionError: Ibex firmware/trace oracle failed"
+    }
+  ]
+}

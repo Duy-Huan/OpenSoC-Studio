@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "spike": "B",
+  "checked_at": "2026-10-22T06:02:17.865Z",
+  "execution_status": "NOT_EXECUTED",
+  "preflight_status": "BLOCKED",
+  "blockers": [
+    "MISSING_TOOL:scons",
+    "MISSING_TOOL:g++",
+    "MISSING_TOOL:cmake",
+    "LINUX_SANDBOX_WORKER_NOT_CONFIGURED"
+  ],
+  "source_pins": [
+    {
+      "name": "gem5",
+      "repository": "https://github.com/gem5/gem5",
+      "requested_ref": "v24.1.0.3",
+      "status": "PINNED_ROOT_LICENSE_ONLY",
+      "transitive_audit": "NOT_EXECUTED",
+      "revision": "b9da2bfe1e21f6efa2730edd4e80e58c5d965458",
+      "source_url": "https://github.com/gem5/gem5/tree/b9da2bfe1e21f6efa2730edd4e80e58c5d965458",
+      "license_expression": "NOASSERTION",
+      "license_url": "https://raw.githubusercontent.com/gem5/gem5/b9da2bfe1e21f6efa2730edd4e80e58c5d965458/LICENSE",
+      "license_sha256": "bafc693ac009ddd37e3a96da715eaab7b97891cbf4f800a4a9d93394dfde989c",
+      "license_file": "docs/compliance/license-evidence/gem5.txt"
+    },
+    {
+      "name": "systemc",
+      "repository": "https://github.com/accellera-official/systemc",
+      "requested_ref": "3.0.1",
+      "status": "PINNED_ROOT_LICENSE_ONLY",
+      "transitive_audit": "NOT_EXECUTED",
+      "revision": "11ad094d282fd5330b27ab57f90f9d231a763da1",
+      "source_url": "https://github.com/accellera-official/systemc/tree/11ad094d282fd5330b27ab57f90f9d231a763da1",
+      "license_expression": "Apache-2.0",
+      "license_url": "https://raw.githubusercontent.com/accellera-official/systemc/11ad094d282fd5330b27ab57f90f9d231a763da1/LICENSE",
+      "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license_file": "docs/compliance/license-evidence/systemc.txt"
+    }
+  ],
+  "note": "Preflight never executes imported RTL or grants PASS. Follow docs/reference-platforms/SPIKES.md in a verified isolated worker. gcc prefix can be configured in upstream common.mk; this inventory checks the selected prefix only."
+}

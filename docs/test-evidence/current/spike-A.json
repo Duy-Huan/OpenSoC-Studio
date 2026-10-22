@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "spike": "A",
+  "checked_at": "2026-10-22T06:02:17.632Z",
+  "execution_status": "NOT_EXECUTED",
+  "preflight_status": "BLOCKED",
+  "blockers": [
+    "MISSING_TOOL:verilator",
+    "MISSING_TOOL:fusesoc",
+    "MISSING_TOOL:g++",
+    "MISSING_TOOL:riscv32-unknown-elf-gcc",
+    "LINUX_SANDBOX_WORKER_NOT_CONFIGURED"
+  ],
+  "source_pins": [
+    {
+      "name": "ibex",
+      "repository": "https://github.com/lowRISC/ibex",
+      "requested_ref": "master",
+      "status": "PINNED_ROOT_LICENSE_ONLY",
+      "transitive_audit": "NOT_EXECUTED",
+      "revision": "1b29dae8866e6c0f0a3cd9dead53a77b4f45e357",
+      "source_url": "https://github.com/lowRISC/ibex/tree/1b29dae8866e6c0f0a3cd9dead53a77b4f45e357",
+      "license_expression": "Apache-2.0",
+      "license_url": "https://raw.githubusercontent.com/lowRISC/ibex/1b29dae8866e6c0f0a3cd9dead53a77b4f45e357/LICENSE",
+      "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license_file": "docs/compliance/license-evidence/ibex.txt"
+    },
+    {
+      "name": "verilator",
+      "repository": "https://github.com/verilator/verilator",
+      "requested_ref": "v5.032",
+      "status": "PINNED_ROOT_LICENSE_ONLY",
+      "transitive_audit": "NOT_EXECUTED",
+      "revision": "8ff77e9d47351b0a59114929880687839a51840b",
+      "source_url": "https://github.com/verilator/verilator/tree/8ff77e9d47351b0a59114929880687839a51840b",
+      "license_expression": "LGPL-3.0",
+      "license_url": "https://raw.githubusercontent.com/verilator/verilator/8ff77e9d47351b0a59114929880687839a51840b/LICENSE",
+      "license_sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "license_file": "docs/compliance/license-evidence/verilator.txt"
+    },
+    {
+      "name": "fusesoc",
+      "repository": "https://github.com/olofk/fusesoc",
+      "requested_ref": "main",
+      "status": "PINNED_ROOT_LICENSE_ONLY",
+      "transitive_audit": "NOT_EXECUTED",
+      "revision": "2ab5297305ef5da3d53739a7b970469da90ca44a",
+      "source_url": "https://github.com/olofk/fusesoc/tree/2ab5297305ef5da3d53739a7b970469da90ca44a",
+      "license_expression": "BSD-2-Clause",
+      "license_url": "https://raw.githubusercontent.com/olofk/fusesoc/2ab5297305ef5da3d53739a7b970469da90ca44a/LICENSE",
+      "license_sha256": "bb94792802f1327befaa98cb006ad9f18e442d4479b4d896e409266e5d4de73f",
+      "license_file": "docs/compliance/license-evidence/fusesoc.txt"
+    }
+  ],
+  "note": "Preflight never executes imported RTL or grants PASS. Follow docs/reference-platforms/SPIKES.md in a verified isolated worker. gcc prefix can be configured in upstream common.mk; this inventory checks the selected prefix only."
+}

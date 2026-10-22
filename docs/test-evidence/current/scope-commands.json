@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-22T06:02:18.086Z",
+  "note": "Expected exits: preflight A/B=2; release gate=1. bash -n is syntax only, not execution.",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "infra/scripts/doctor.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "git: AVAILABLE\npython: AVAILABLE\npython3: UNAVAILABLE\nverilator: UNAVAILABLE\nfusesoc: UNAVAILABLE\nscons: UNAVAILABLE\ng++: UNAVAILABLE\ncmake: UNAVAILABLE\ncargo: UNAVAILABLE\nriscv32-unknown-elf-gcc: UNAVAILABLE\ndocker: UNAVAILABLE\nInventory only; AVAILABLE does not certify sandbox or simulation capability.\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "infra/scripts/spike-preflight.mjs",
+        "A"
+      ],
+      "exit_code": 2,
+      "stdout": "A: BLOCKED; simulation NOT_EXECUTED\nMISSING_TOOL:verilator\nMISSING_TOOL:fusesoc\nMISSING_TOOL:g++\nMISSING_TOOL:riscv32-unknown-elf-gcc\nLINUX_SANDBOX_WORKER_NOT_CONFIGURED\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "infra/scripts/spike-preflight.mjs",
+        "B"
+      ],
+      "exit_code": 2,
+      "stdout": "B: BLOCKED; simulation NOT_EXECUTED\nMISSING_TOOL:scons\nMISSING_TOOL:g++\nMISSING_TOOL:cmake\nLINUX_SANDBOX_WORKER_NOT_CONFIGURED\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "infra/scripts/license-audit.mjs",
+        "--release"
+      ],
+      "exit_code": 1,
+      "stdout": "BLOCKED: 106 installed dependencies audited (release)\nBLOCKED: PROJECT_LICENSE_NOT_SELECTED\nBLOCKED: M0_FEASIBILITY_GATES_OPEN\nBLOCKED: PRODUCT_TRANSITIVE_AUDIT_NOT_EXECUTED\nBLOCKED: SIGNED_RELEASE_MANIFEST_MISSING\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "C:/Program Files/Git/bin/bash.exe",
+        "-n",
+        "infra/spikes/run-a.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "C:/Program Files/Git/bin/bash.exe",
+        "-n",
+        "infra/spikes/run-b-demo.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensoc.local/contracts/1.0/cpu-profile.schema.json",
+  "title": "OpenSoC cpu-profile 1.0 DRAFT",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supplier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "fileset": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "top": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "repository",
+        "commit",
+        "content_sha256",
+        "fileset",
+        "top"
+      ]
+    },
+    "isa": {
+      "type": "string",
+      "minLength": 1
+    },
+    "xlen": {
+      "enum": [
+        32,
+        64
+      ]
+    },
+    "privileged_ext": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "protocol": {
+            "enum": [
+              "AXI4-Lite",
+              "AXI4",
+              "APB",
+              "TL-UL",
+              "TileLink",
+              "generic_tlm",
+              "pin"
+            ]
+          },
+          "role": {
+            "enum": [
+              "initiator",
+              "target"
+            ]
+          },
+          "data_width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "address_width": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          },
+          "clock_domain": {
+            "type": "string",
+            "minLength": 1
+          },
+          "provenance": {
+            "enum": [
+              "EXTRACTED",
+              "INFERRED",
+              "REVIEWED",
+              "VERIFIED",
+              "UNAVAILABLE"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "adapter_contract": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "protocol",
+          "role",
+          "data_width",
+          "address_width",
+          "clock_domain",
+          "provenance",
+          "evidence_ids",
+          "adapter_contract"
+        ]
+      },
+      "minItems": 0
+    },
+    "boot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "entry": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]+$"
+        },
+        "load_base": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]+$"
+        },
+        "memory_size": {
+          "type": "string",
+          "pattern": "^0x[0-9a-fA-F]+$"
+        },
+        "firmware_formats": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "elf",
+              "vmem",
+              "bin"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "entry",
+        "load_base",
+        "memory_size",
+        "firmware_formats"
+      ]
+    },
+    "lanes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "lane": {
+            "enum": [
+              "rtl_standalone",
+              "rtl_cpu_soc",
+              "gem5_arch",
+              "gem5_hybrid"
+            ]
+          },
+          "status": {
+            "enum": [
+              "SUPPORTED",
+              "EXPERIMENTAL",
+              "UNSUPPORTED"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "lane",
+          "status",
+          "reason",
+          "evidence_ids"
+        ]
+      },
+      "minItems": 1
+    },
+    "generator_config_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "license_expression": {
+          "type": "string",
+          "minLength": 1
+        },
+        "redistribution": {
+          "enum": [
+            "allowed",
+            "forbidden",
+            "review_required"
+          ]
+        }
+      },
+      "required": [
+        "license_expression",
+        "redistribution"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "provider",
+    "supplier",
+    "source",
+    "isa",
+    "xlen",
+    "privileged_ext",
+    "interfaces",
+    "boot",
+    "lanes",
+    "generator_config_sha256",
+    "rights"
+  ]
+}

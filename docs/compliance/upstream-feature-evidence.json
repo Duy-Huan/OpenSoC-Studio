@@ -1,0 +1,164 @@
+{
+  "checked_at": "2026-10-22T04:58:23.099Z",
+  "scope": "Documentation/source inspection, NOT runtime compatibility",
+  "results": [
+    {
+      "name": "ibex",
+      "revision": "1b29dae8866e6c0f0a3cd9dead53a77b4f45e357",
+      "url": "https://raw.githubusercontent.com/lowRISC/ibex/1b29dae8866e6c0f0a3cd9dead53a77b4f45e357/examples/simple_system/README.md",
+      "sha256": "1bc428e57c4480d5f8c750d63484dc7ce24079ee0df160c952310f5537b32ab6",
+      "checks": [
+        {
+          "marker": "fusesoc",
+          "found": true
+        },
+        {
+          "marker": "hello_test",
+          "found": true
+        },
+        {
+          "marker": "--meminit",
+          "found": true
+        },
+        {
+          "marker": "trace_core",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "gem5",
+      "revision": "b9da2bfe1e21f6efa2730edd4e80e58c5d965458",
+      "url": "https://raw.githubusercontent.com/gem5/gem5/b9da2bfe1e21f6efa2730edd4e80e58c5d965458/util/tlm/README",
+      "sha256": "d787ac97fb130c5c2b97e46802e445ff70c9242153eb9353fdd997747f2a3867",
+      "checks": [
+        {
+          "marker": "Gem5SlaveTransactor",
+          "found": true
+        },
+        {
+          "marker": "libgem5_opt.so",
+          "found": true
+        },
+        {
+          "marker": "pthread",
+          "found": true
+        },
+        {
+          "marker": "tcmalloc",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "systemc",
+      "revision": "11ad094d282fd5330b27ab57f90f9d231a763da1",
+      "url": "https://raw.githubusercontent.com/accellera-official/systemc/11ad094d282fd5330b27ab57f90f9d231a763da1/README.md",
+      "sha256": "7e590897973431bf4935ecda02afa11db38957490eda8e0ed1e247f11ca8c19f",
+      "checks": [
+        {
+          "marker": "SystemC",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "wellen",
+      "revision": "82db2a5b993c7e93a049a183ba84f93c6a65bf1f",
+      "url": "https://raw.githubusercontent.com/ekiwi/wellen/82db2a5b993c7e93a049a183ba84f93c6a65bf1f/Cargo.toml",
+      "sha256": "d1653984a07a822f784051066b96fd35c10a9401de79793df7d6a76d3a57d721",
+      "checks": [
+        {
+          "marker": "rust-version",
+          "found": true
+        },
+        {
+          "marker": "license",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "rohd-wave",
+      "revision": "528178830b081c0aca2e6bbb321372d26725fc59",
+      "url": "https://raw.githubusercontent.com/intel/rohd-wave-viewer/528178830b081c0aca2e6bbb321372d26725fc59/README.md",
+      "sha256": "b2fbf1437a59abf9c8351e51c3a21debddc83fe3e6f6798a52d0d0882eefbeb3",
+      "checks": [
+        {
+          "marker": "Flutter",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "rohd-schematic",
+      "revision": "018851bbcbfbe463c4c370910aba5192798997eb",
+      "url": "https://raw.githubusercontent.com/intel/rohd-schematic-viewer/018851bbcbfbe463c4c370910aba5192798997eb/README.md",
+      "sha256": "f8145e80302bec5489eb76f9b10564db19bed064a880cd7d5ccb41eca9031fbf",
+      "checks": [
+        {
+          "marker": "schematic",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "slang",
+      "revision": "3b351a52b15755b896d3b0144ae0432547d86618",
+      "url": "https://raw.githubusercontent.com/MikePopoloski/slang/3b351a52b15755b896d3b0144ae0432547d86618/README.md",
+      "sha256": "68fdf2d0f53650365cf3524036b0edee6e2e8ccbb636a1dbd620fbfb87a67917",
+      "checks": [
+        {
+          "marker": "SystemVerilog",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "fusesoc",
+      "revision": "2ab5297305ef5da3d53739a7b970469da90ca44a",
+      "url": "https://raw.githubusercontent.com/olofk/fusesoc/2ab5297305ef5da3d53739a7b970469da90ca44a/README.md",
+      "sha256": "2b556ef2e8c2a9f56ec9d5ae9130d70a96201d4042aea12bbb6e26a47cef7e20",
+      "checks": [
+        {
+          "marker": "FuseSoC",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "chipyard",
+      "revision": "157dd69e49b9866be2bf8db390ee78bc38cd4438",
+      "url": "https://raw.githubusercontent.com/ucb-bar/chipyard/157dd69e49b9866be2bf8db390ee78bc38cd4438/README.md",
+      "sha256": "2d24092303384984451f5e688d0fa833cb7e879b41b2d9356fc944ba95d3d442",
+      "checks": [
+        {
+          "marker": "Chipyard",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    },
+    {
+      "name": "opentitan",
+      "revision": "8fe9809738dc738f50f7011a0c671ccfe5a61020",
+      "url": "https://raw.githubusercontent.com/lowRISC/opentitan/8fe9809738dc738f50f7011a0c671ccfe5a61020/README.md",
+      "sha256": "b2f37e8821413435bf67feba3cc69796b7d750ef3e30cb376512ad8b49caeb5e",
+      "checks": [
+        {
+          "marker": "OpenTitan",
+          "found": true
+        }
+      ],
+      "status": "SOURCE_MARKERS_FOUND"
+    }
+  ]
+}

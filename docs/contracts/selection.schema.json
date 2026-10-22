@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensoc.local/contracts/1.0/selection.schema.json",
+  "title": "OpenSoC selection 1.0 DRAFT",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "projectId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ipInstanceId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hierarchyPath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signalId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceLocation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fileId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "fileId",
+        "line"
+      ]
+    },
+    "transactionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "simTime": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ticks": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$"
+        },
+        "timescaleFs": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "ticks",
+        "timescaleFs"
+      ]
+    },
+    "originId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidenceLevel": {
+      "enum": [
+        "EXACT",
+        "DERIVED",
+        "UNAVAILABLE"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "projectId",
+    "originId",
+    "evidenceLevel"
+  ]
+}

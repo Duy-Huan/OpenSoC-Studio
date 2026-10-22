@@ -1,0 +1,29 @@
+name: Workbench API and browser acceptance
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  local-workbench:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.22.0
+          cache: npm
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: 3.12.10
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install -r apps/api/requirements.lock
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run build:web
+      - run: npm run check
+      - run: npm run test:api
+      - run: npx playwright install --with-deps chromium
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: .cache/playwright
+      - run: npm run test:e2e
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: .cache/playwright
+      # No native RTL/CPU/hybrid acceptance is implied by this job.

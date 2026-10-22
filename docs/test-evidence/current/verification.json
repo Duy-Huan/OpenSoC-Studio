@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-22T08:05:32.677Z",
+  "scope": "Local workbench/analysis/composer/ELF parser and reference evidence access; native execution reported separately in real-soc/regression.json",
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "\n> opensoc-studio@0.2.0 check\n> node infra/scripts/check.mjs\n\n✔ soc-config: accepts version 1.0 draft fixture (40.4154ms)\n✔ soc-config: rejects unknown schema version (0.3711ms)\n✔ soc-config: rejects undeclared fields (0.1745ms)\n✔ ip-package: accepts version 1.0 draft fixture (10.196ms)\n✔ ip-package: rejects unknown schema version (0.2683ms)\n✔ ip-package: rejects undeclared fields (0.1131ms)\n✔ run-manifest: accepts version 1.0 draft fixture (6.0356ms)\n✔ run-manifest: rejects unknown schema version (0.243ms)\n✔ run-manifest: rejects undeclared fields (0.1129ms)\n✔ trace-event: accepts version 1.0 draft fixture (5.3317ms)\n✔ trace-event: rejects unknown schema version (0.1763ms)\n✔ trace-event: rejects undeclared fields (0.0775ms)\n✔ selection: accepts version 1.0 draft fixture (3.0048ms)\n✔ selection: rejects unknown schema version (0.1159ms)\n✔ selection: rejects undeclared fields (0.0507ms)\n✔ chm: accepts version 1.0 draft fixture (18.6799ms)\n✔ chm: rejects unknown schema version (0.2426ms)\n✔ chm: rejects undeclared fields (0.1473ms)\n✔ cpu-profile: accepts version 1.0 draft fixture (10.8367ms)\n✔ cpu-profile: rejects unknown schema version (0.1977ms)\n✔ cpu-profile: rejects undeclared fields (0.0723ms)\n✔ SoC: valid half-open adjacent ranges do not overlap (0.3654ms)\n✔ SoC rejects overlap (0.1603ms)\n✔ SoC rejects overflow (0.0873ms)\n✔ SoC rejects alignment (0.1501ms)\n✔ SoC rejects zero size (0.0853ms)\n✔ SoC rejects zero alignment (0.0896ms)\n✔ SoC rejects non-power-of-two alignment (0.0497ms)\n✔ SoC rejects unknown instance (0.055ms)\n✔ SoC rejects duplicate instance (0.0989ms)\n✔ SoC rejects unknown endpoint (0.0584ms)\n✔ SoC rejects role mismatch (0.0485ms)\n✔ SoC rejects width mismatch (0.0647ms)\n✔ SoC rejects protocol mismatch (0.0529ms)\n✔ SoC rejects clock mismatch (0.0418ms)\n✔ SoC rejects unverified adapter (0.0636ms)\n✔ SoC rejects duplicate target (0.0483ms)\n✔ SoC: 64-bit address comparison preserves integer precision (0.0889ms)\n✔ sim time: precision beyond JS Number (0.1426ms)\n✔ sim time rejects -1/1 (0.3178ms)\n✔ sim time rejects 1/0 (0.0714ms)\n✔ sim time rejects 1.5/1 (0.0717ms)\n✔ sim time rejects 1e3/1 (0.0486ms)\n✔ trace rejects numeric simulation timestamp (0.1106ms)\n✔ VERIFIED interface cannot use inferred/unrelated evidence (0.1538ms)\n✔ publication requires scoped verified evidence (0.0584ms)\n✔ run: AI disabled and no network is valid contract (0.0958ms)\n✔ run: enabled outbound network rejected (0.0791ms)\n✔ run: mutable toolchain tag rejected (0.1084ms)\n✔ run: missing CPU/firmware for RTL CPU lane rejected (0.0827ms)\n✔ run: unapproved license rejected (0.0516ms)\n✔ license allows MIT (1.3641ms)\n✔ license allows BSD-2-Clause (0.131ms)\n✔ license allows BSD-3-Clause (0.0755ms)\n✔ license allows ISC (0.0562ms)\n✔ license allows Apache-2.0 (0.0724ms)\n✔ license blocks undefined (0.0715ms)\n✔ license blocks NOASSERTION (0.0668ms)\n✔ license blocks UNLICENSED (0.058ms)\n✔ license blocks Proprietary (0.0623ms)\n✔ license blocks MIT OR Proprietary (0.1274ms)\n✔ license blocks LGPL-3.0 OR Proprietary (0.0609ms)\n✔ license blocks LicenseRef-Unknown (0.0727ms)\n✔ license blocks BUSL-1.1 (0.1071ms)\n✔ license requires review LGPL-3.0-only (0.0897ms)\n✔ license requires review EPL-2.0 OR GPL-3.0-or-later (0.0628ms)\n✔ license requires review MPL-2.0 (0.0307ms)\n✔ enterprise package blocked even with claimed MIT (0.0949ms)\n✔ downloaded root license evidence matches pinned SHA256 (9.4275ms)\nℹ tests 69\nℹ suites 0\nℹ pass 69\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 210.7633\n\nPASS: 106 installed dependencies audited (development)\n\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build:web"
+      ],
+      "exit_code": 0,
+      "stdout": "\n> opensoc-studio@0.2.0 build:web\n> tsc -p apps/web/tsconfig.json && vite build --config apps/web/vite.config.ts\n\nvite v7.3.7 building client environment for production...\ntransforming...\n✓ 909 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                            0.46 kB │ gzip:   0.31 kB\ndist/assets/editor.worker-D1TDBLlL.js    275.67 kB\ndist/assets/editor-DRbysTD8.css           99.22 kB │ gzip:  14.37 kB\ndist/assets/index-Cr99bOZC.css           178.82 kB │ gzip:  18.67 kB\ndist/assets/index-BjYlF0iI.js            872.55 kB │ gzip: 243.11 kB\ndist/assets/editor-Cng1VxAb.js         2,733.25 kB │ gzip: 709.38 kB\n✓ built in 4.88s\n",
+      "stderr": "\n(!) Some chunks are larger than 2500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+      "error": null
+    },
+    {
+      "command": [
+        "D:\\git-repo\\OpenSoC-Studio\\.tools\\python\\python.exe",
+        "-m",
+        "pytest",
+        "tests/integration",
+        "-q",
+        "--junitxml=docs/test-evidence/current/api-tests.xml"
+      ],
+      "exit_code": 0,
+      "stdout": ".....................................................                    [100%]\r\n============================== warnings summary ===============================\r\n.tools\\python\\Lib\\site-packages\\fastapi\\testclient.py:1\r\n  D:\\git-repo\\OpenSoC-Studio\\.tools\\python\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\r\n    from starlette.testclient import TestClient as TestClient  # noqa\r\n\r\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\r\n53 passed, 1 warning in 2.53s\r\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "node_modules/playwright/cli.js",
+        "test"
+      ],
+      "exit_code": 0,
+      "stdout": "\nRunning 8 tests using 1 worker\n\n  ok 1 tests\\browser-e2e\\reference.spec.ts:5:1 › GitHub PicoRV32 imports in the workbench and real RTL evidence downloads with matching hash (1.8s)\n  ok 2 tests\\browser-e2e\\runtime.spec.ts:4:1 › UI builds real SystemC and Yosys workflows and navigates actual Wellen signal values (10.9s)\n  ok 3 tests\\browser-e2e\\runtime.spec.ts:73:1 › UI builds Ibex firmware on actual RTL and opens its FST with Wellen (37.6s)\n  ok 4 tests\\browser-e2e\\workbench.spec.ts:36:1 › real import, slang elaboration, source selection, persistence and evidence export (2.5s)\n  ok 5 tests\\browser-e2e\\workbench.spec.ts:82:1 › compiler errors show actual source diagnostics (1.2s)\n  ok 6 tests\\browser-e2e\\workbench.spec.ts:97:1 › IP review/reuse and canonical composer reject conflicting MMIO without committing (2.2s)\n  ok 7 tests\\browser-e2e\\workbench.spec.ts:172:1 › command palette opens waveform panel with honest unavailable state (504ms)\n  ok 8 tests\\browser-e2e\\workbench.spec.ts:190:1 › firmware UI rejects invalid ELF and labels structural-only validation (744ms)\n\n  8 passed (58.2s)\n",
+      "stderr": "(node:17488) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+      "error": null
+    }
+  ]
+}

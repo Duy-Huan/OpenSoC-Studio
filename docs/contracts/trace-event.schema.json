@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensoc.local/contracts/1.0/trace-event.schema.json",
+  "title": "OpenSoC trace-event 1.0 DRAFT",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seq": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "event_kind": {
+      "enum": [
+        "MMIO_WRITE",
+        "MMIO_READ",
+        "TRANSACTION_BEGIN",
+        "TRANSACTION_END",
+        "ASSERTION",
+        "RESET",
+        "FIRMWARE_EXIT"
+      ]
+    },
+    "producer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sim_time": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ticks": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$"
+        },
+        "tick_fs": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "ticks",
+        "tick_fs",
+        "origin"
+      ]
+    },
+    "clock_domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rtl_cycle": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "instance_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "address": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]+$"
+    },
+    "transaction_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "correlation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "INSTRUMENTED",
+            "DECODED",
+            "UNAVAILABLE"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "EXACT",
+            "DERIVED",
+            "UNAVAILABLE"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "confidence"
+      ]
+    },
+    "write_data": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]+$"
+    },
+    "read_data": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]+$"
+    },
+    "byte_enable": {
+      "type": "string",
+      "pattern": "^0x[0-9a-fA-F]+$"
+    },
+    "hierarchy_path": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "event_id",
+    "seq",
+    "event_kind",
+    "producer",
+    "sim_time",
+    "clock_domain",
+    "rtl_cycle",
+    "instance_id",
+    "transaction_id",
+    "correlation"
+  ]
+}

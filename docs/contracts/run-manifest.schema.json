@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensoc.local/contracts/1.0/run-manifest.schema.json",
+  "title": "OpenSoC run-manifest 1.0 DRAFT",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_snapshot_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "lane": {
+      "enum": [
+        "rtl_standalone",
+        "rtl_cpu_soc",
+        "gem5_arch",
+        "gem5_hybrid"
+      ]
+    },
+    "ip_lock": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ip_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "content_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "ip_id",
+          "content_sha256"
+        ]
+      },
+      "minItems": 0
+    },
+    "board_config_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "cpu_profile_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "firmware_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "scenario_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "adapter_sha256": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "minItems": 0
+    },
+    "toolchain_image": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "seed": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)$"
+    },
+    "time_resolution_fs": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]*$"
+    },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "enum": [
+            "fst",
+            "vcd",
+            "ghw",
+            "none"
+          ]
+        },
+        "signal_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "format",
+        "signal_ids"
+      ]
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cpus": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "memory_mb": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "disk_mb": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "pids": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "wall_time_s": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "network": {
+          "const": "disabled"
+        }
+      },
+      "required": [
+        "cpus",
+        "memory_mb",
+        "disk_mb",
+        "pids",
+        "wall_time_s",
+        "network"
+      ]
+    },
+    "ai_policy": {
+      "const": "NO_AI"
+    },
+    "license_status": {
+      "enum": [
+        "APPROVED",
+        "REVIEW_REQUIRED",
+        "REJECTED"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "project_id",
+    "project_snapshot_sha256",
+    "lane",
+    "ip_lock",
+    "board_config_sha256",
+    "cpu_profile_sha256",
+    "firmware_sha256",
+    "scenario_sha256",
+    "adapter_sha256",
+    "toolchain_image",
+    "seed",
+    "time_resolution_fs",
+    "trace",
+    "resources",
+    "ai_policy",
+    "license_status"
+  ]
+}

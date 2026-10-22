@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-22T05:04:43.485Z",
+  "node": "v24.22.0",
+  "commit": null,
+  "commit_note": "Initial repository had no commits; input SHA256 recorded instead.",
+  "inputs": {
+    "AI_START_HERE_OpenSoC.md": "e6661ec7fe343ed156ea2478ad8f51e262a7bc946c4d6ed032bf6f127115d64b",
+    "OpenSoC_Studio_Engineering_Blueprint_v1_0.md": "38a5610b8f9607873b2757eed2e78b44a27bcc50edb6bb9bfd423ba9ce55233c",
+    "package-lock.json": "4a362e0d471a88b3e8aee6e63047e66c8d2f3b512fd80130691a4b519cbeaaf1",
+    "docs/contracts/chm.schema.json": "0726d16fb67467d1c205450d8a207bf8fe86cf929ca3ab4f09fac8cfd44db724",
+    "docs/contracts/cpu-profile.schema.json": "deb3ab61bf7524f6ebcaf37eea5e23878ad7e9a69a1dfb44ba38edf26ae8a060",
+    "docs/contracts/ip-package.schema.json": "0f0b75c224a2ca96dc22fb7bdcd9a4948b84507080130587d14cc3fd2442756f",
+    "docs/contracts/openapi.json": "ea42ea53a409883a0bb9b33aad7ac785bad38dec877cdbff62b247b38cea6bcc",
+    "docs/contracts/run-manifest.schema.json": "807c151f7b3450a30a188af318136afc8e703368fc8ecfbf23be0dc46c682ab6",
+    "docs/contracts/selection.schema.json": "35dedc40df0985600a1b775d8cce778fb9a6f7f8d532da0565e77350531a7c4b",
+    "docs/contracts/soc-config.schema.json": "3a67565537d7710ffe682588a25a57d47dd4c8304780da84edf5c81798487ebb",
+    "docs/contracts/trace-event.schema.json": "24a29b196abeb7cebcb776b9ca6319503710d75ee5e554a9db4e8f3077393d12"
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/contract/model.test.mjs",
+        "tests/licensing/policy.test.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "✔ soc-config: accepts version 1.0 draft fixture (40.9466ms)\n✔ soc-config: rejects unknown schema version (0.4035ms)\n✔ soc-config: rejects undeclared fields (0.2ms)\n✔ ip-package: accepts version 1.0 draft fixture (10.1491ms)\n✔ ip-package: rejects unknown schema version (0.311ms)\n✔ ip-package: rejects undeclared fields (0.1199ms)\n✔ run-manifest: accepts version 1.0 draft fixture (5.9264ms)\n✔ run-manifest: rejects unknown schema version (0.2358ms)\n✔ run-manifest: rejects undeclared fields (0.1066ms)\n✔ trace-event: accepts version 1.0 draft fixture (4.9428ms)\n✔ trace-event: rejects unknown schema version (0.1728ms)\n✔ trace-event: rejects undeclared fields (0.0647ms)\n✔ selection: accepts version 1.0 draft fixture (3.1148ms)\n✔ selection: rejects unknown schema version (0.1268ms)\n✔ selection: rejects undeclared fields (0.0548ms)\n✔ chm: accepts version 1.0 draft fixture (18.6158ms)\n✔ chm: rejects unknown schema version (0.2267ms)\n✔ chm: rejects undeclared fields (0.164ms)\n✔ cpu-profile: accepts version 1.0 draft fixture (9.2758ms)\n✔ cpu-profile: rejects unknown schema version (0.1789ms)\n✔ cpu-profile: rejects undeclared fields (0.0686ms)\n✔ SoC: valid half-open adjacent ranges do not overlap (0.3718ms)\n✔ SoC rejects overlap (0.1606ms)\n✔ SoC rejects overflow (0.0607ms)\n✔ SoC rejects alignment (0.0817ms)\n✔ SoC rejects zero size (0.0748ms)\n✔ SoC rejects zero alignment (0.0961ms)\n✔ SoC rejects non-power-of-two alignment (0.0547ms)\n✔ SoC rejects unknown instance (0.0544ms)\n✔ SoC rejects duplicate instance (0.1678ms)\n✔ SoC rejects unknown endpoint (0.1002ms)\n✔ SoC rejects role mismatch (0.0644ms)\n✔ SoC rejects width mismatch (0.075ms)\n✔ SoC rejects protocol mismatch (0.0443ms)\n✔ SoC rejects clock mismatch (0.0387ms)\n✔ SoC rejects unverified adapter (0.0606ms)\n✔ SoC rejects duplicate target (0.0481ms)\n✔ SoC: 64-bit address comparison preserves integer precision (0.0939ms)\n✔ sim time: precision beyond JS Number (0.1375ms)\n✔ sim time rejects -1/1 (0.313ms)\n✔ sim time rejects 1/0 (0.0638ms)\n✔ sim time rejects 1.5/1 (0.07ms)\n✔ sim time rejects 1e3/1 (0.0348ms)\n✔ trace rejects numeric simulation timestamp (0.0982ms)\n✔ VERIFIED interface cannot use inferred/unrelated evidence (0.1781ms)\n✔ publication requires scoped verified evidence (0.0652ms)\n✔ run: AI disabled and no network is valid contract (0.102ms)\n✔ run: enabled outbound network rejected (0.0864ms)\n✔ run: mutable toolchain tag rejected (0.1081ms)\n✔ run: missing CPU/firmware for RTL CPU lane rejected (0.0834ms)\n✔ run: unapproved license rejected (0.0504ms)\n✔ license allows MIT (1.3954ms)\n✔ license allows BSD-2-Clause (0.1359ms)\n✔ license allows BSD-3-Clause (0.0726ms)\n✔ license allows ISC (0.0573ms)\n✔ license allows Apache-2.0 (0.089ms)\n✔ license blocks undefined (0.0752ms)\n✔ license blocks NOASSERTION (0.0727ms)\n✔ license blocks UNLICENSED (0.0617ms)\n✔ license blocks Proprietary (0.0648ms)\n✔ license blocks MIT OR Proprietary (0.109ms)\n✔ license blocks LGPL-3.0 OR Proprietary (0.0584ms)\n✔ license blocks LicenseRef-Unknown (0.0583ms)\n✔ license blocks BUSL-1.1 (0.1147ms)\n✔ license requires review LGPL-3.0-only (0.1014ms)\n✔ license requires review EPL-2.0 OR GPL-3.0-or-later (0.0662ms)\n✔ license requires review MPL-2.0 (0.031ms)\n✔ enterprise package blocked even with claimed MIT (0.1753ms)\n✔ downloaded root license evidence matches pinned SHA256 (9.3083ms)\nℹ tests 69\nℹ suites 0\nℹ pass 69\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 213.2902\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "node",
+        "infra/scripts/license-audit.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 5 installed dependencies audited (development)\n",
+      "stderr": "",
+      "error": null
+    }
+  ],
+  "status": "PASS",
+  "scope": "M0 contract and development license checks only; not hardware acceptance"
+}

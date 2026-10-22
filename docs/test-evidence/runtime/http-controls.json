@@ -1,0 +1,282 @@
+{
+  "status": "PASS",
+  "run_id": "runtime-90bf7798b1eb45ff",
+  "checks": [
+    "running native job cancelled and acknowledged",
+    "no successful verdict after cancellation",
+    "monotonic persisted event sequences",
+    "event replay after sequence matches"
+  ],
+  "state": "CANCELLED",
+  "events": [
+    {
+      "data": {
+        "state": "QUEUED"
+      },
+      "kind": "job.state",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 1
+    },
+    {
+      "data": {
+        "state": "RUNNING"
+      },
+      "kind": "job.state",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 2
+    },
+    {
+      "data": {
+        "reason": "USER_CANCEL_REQUESTED",
+        "state": "CANCELLING"
+      },
+      "kind": "job.state",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 3
+    },
+    {
+      "data": {
+        "id": "systemc_build",
+        "started_at": "2026-10-22T07:55:00.707245+00:00",
+        "state": "RUNNING"
+      },
+      "kind": "stage.state",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 4
+    },
+    {
+      "data": {
+        "argv": [
+          "g++",
+          "-std=c++17",
+          "-O2",
+          "/mnt/d/git-repo/OpenSoC-Studio/workers/runtime/tlm_reference.cpp",
+          "-o",
+          "/mnt/d/git-repo/OpenSoC-Studio/artifacts/runtime/runtime-90bf7798b1eb45ff/tlm-reference",
+          "-lsystemc",
+          "-pthread"
+        ],
+        "message": "systemc-compile"
+      },
+      "kind": "build.log",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 5
+    },
+    {
+      "data": {
+        "argv": [
+          "g++",
+          "-std=c++17",
+          "-O2",
+          "/mnt/d/git-repo/OpenSoC-Studio/workers/runtime/tlm_reference.cpp",
+          "-o",
+          "/mnt/d/git-repo/OpenSoC-Studio/artifacts/runtime/runtime-90bf7798b1eb45ff/tlm-reference",
+          "-lsystemc",
+          "-pthread"
+        ],
+        "elapsed_s": 0.008,
+        "exit_code": -9,
+        "label": "systemc-compile",
+        "reason": "CANCELLED",
+        "stage": "systemc_build",
+        "stderr": "artifacts/runtime/runtime-90bf7798b1eb45ff/logs/000-systemc-compile.stderr.log",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "artifacts/runtime/runtime-90bf7798b1eb45ff/logs/000-systemc-compile.stdout.log",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "kind": "command.completed",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 6
+    },
+    {
+      "data": {
+        "details": {
+          "error": "RuntimeError: CANCELLED"
+        },
+        "id": "systemc_build",
+        "started_at": "2026-10-22T07:55:00.707245+00:00",
+        "state": "FAIL"
+      },
+      "kind": "stage.state",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 7
+    },
+    {
+      "data": {
+        "error": "RuntimeError: CANCELLED",
+        "status": "CANCELLED"
+      },
+      "kind": "run.verdict",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 8
+    },
+    {
+      "data": {
+        "result": {
+          "artifacts": {
+            "artifacts/runtime/runtime-90bf7798b1eb45ff/logs/000-systemc-compile.stderr.log": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            },
+            "artifacts/runtime/runtime-90bf7798b1eb45ff/logs/000-systemc-compile.stdout.log": {
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "size": 0
+            }
+          },
+          "checks": {},
+          "commands": [
+            {
+              "argv": [
+                "g++",
+                "-std=c++17",
+                "-O2",
+                "/mnt/d/git-repo/OpenSoC-Studio/workers/runtime/tlm_reference.cpp",
+                "-o",
+                "/mnt/d/git-repo/OpenSoC-Studio/artifacts/runtime/runtime-90bf7798b1eb45ff/tlm-reference",
+                "-lsystemc",
+                "-pthread"
+              ],
+              "elapsed_s": 0.008,
+              "exit_code": -9,
+              "label": "systemc-compile",
+              "reason": "CANCELLED",
+              "stage": "systemc_build",
+              "stderr": "artifacts/runtime/runtime-90bf7798b1eb45ff/logs/000-systemc-compile.stderr.log",
+              "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "stdout": "artifacts/runtime/runtime-90bf7798b1eb45ff/logs/000-systemc-compile.stdout.log",
+              "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ],
+          "error": "RuntimeError: CANCELLED",
+          "isolation": "UNPRIVILEGED_WSL_RESOURCE_LIMITED_NOT_FULL_OS_SANDBOX",
+          "network_isolated": false,
+          "profile_id": "systemc_tlm",
+          "run_at": "2026-10-22T07:55:00.744979+00:00",
+          "scenario": "baseline",
+          "schema_version": "1.0",
+          "simulation_executed": false,
+          "source_hashes": {},
+          "source_revision": null,
+          "stages": [
+            {
+              "details": {
+                "error": "RuntimeError: CANCELLED"
+              },
+              "id": "systemc_build",
+              "started_at": "2026-10-22T07:55:00.707245+00:00",
+              "state": "FAIL"
+            }
+          ],
+          "status": "CANCELLED",
+          "toolchain": {
+            "distro": "OpenSoC-Runtime",
+            "schema_version": "1.0",
+            "scope": "Prepared tools; each runtime still requires workflow acceptance",
+            "tools": {
+              "fusesoc": {
+                "exit_code": 0,
+                "path": "/opt/opensoc/venv/bin/fusesoc",
+                "sha256": "bd964c4b497c6a38febd4514a0b1bb80af7938a5ad6b7e86b0d931b9e35512ab",
+                "version_output": "2.4.3\n"
+              },
+              "g++": {
+                "exit_code": 0,
+                "path": "/usr/bin/x86_64-linux-gnu-g++-13",
+                "sha256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769",
+                "version_output": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+              },
+              "gem5": {
+                "available": true,
+                "path": "/opt/opensoc/src/gem5/build/RISCV/gem5.opt",
+                "probe_exit_code": 0,
+                "sha256": "f04805e5bb9314b9dde043597be1bcecb7e96f87a6bf4a74db0853ce146f0e79",
+                "version_output": "Build information:\n\ngem5 version 24.1.0.3\ncompiled Oct 22 2026 07:38:56\nbuild options:\n    ARMLMD_LICENSE_COUNT = 0\n    ARMLMD_LICENSE_FILE = \n    BATCH = False\n    BATCH_CMD = \n    BUILD_GPU = False\n    BUILD_ISA = True\n    BUILD_TLM = False\n    HAVE_CAPSTONE = False\n    HAVE_DEPRECATED_NAMESPACE = True\n    HAVE_FENV = True\n    HAVE_HDF5 = True\n    HAVE_KVM = True\n    HAVE_PERF_ATTR_EXCLUDE_HOST = 1\n    HAVE_PNG = True\n    HAVE_POSIX_CLOCK = True\n    HAVE_PROTOBUF = True\n    HAVE_SYSTEMC = True\n    HAVE_TUNTAP = True\n    HAVE_VALGRIND = False\n    KVM_ISA = x86\n    M5_BUILD_CACHE = \n    MAXCORE_HOME = \n    NUMBER_BITS_PER_SET = 64\n    PROTOCOL = MI_example\n    PVLIB_FLAVOR = \n    PVLIB_HOME = \n    RUBY = True\n    RUBY_PROTOCOL_CHI = False\n    RUBY_PROTOCOL_GPU_VIPER = False\n    RUBY_PROTOCOL_Garnet_standalone = False\n    RUBY_PROTOCOL_MESI_Three_Level = False\n    RUBY_PROTOCOL_MESI_Three_Level_HTM = False\n    RUBY_PROTOCOL_MESI_Two_Level = False\n    RUBY_PROTOCOL_MI_example = True\n    RUBY_PROTOCOL_MOESI_AMD_Base = False\n    RUBY_PROTOCOL_MOESI_CMP_directory = False\n    RUBY_PROTOCOL_MOESI_CMP_token = False\n    RUBY_PROTOCOL_MOESI_hammer = False\n    RUBY_PROTOCOL_MSI = False\n    SIMGEN = \n    SLICC_HTML = False\n    TARGET_GPU_ISA = \n    USE_ARM_FASTMODEL = False\n    USE_ARM_ISA = False\n    USE_CAPSTONE = False\n    USE_EFENCE = False\n    USE_KVM = True\n    USE_MIPS_ISA = False\n    USE_MULTIPLE_PROTOCOLS = True\n    USE_POSIX_CLOCK = False\n    USE_POWER_ISA = False\n    USE_RISCV_ISA = True\n    USE_SPARC_ISA = False\n    USE_SYSTEMC = True\n    USE_TEST_OBJECTS = False\n    USE_X86_ISA = False\n    VEGA_GPU_ISA = False\n\n"
+              },
+              "ibex": {
+                "available": true,
+                "path": "/opt/opensoc/src/ibex/build/lowrisc_ibex_ibex_simple_system_0/sim-verilator/Vibex_simple_system",
+                "sha256": "70738e3279254170bd2afb293831e59b45e3be5ebff3b174071dad8dc2660756"
+              },
+              "iverilog": {
+                "exit_code": 0,
+                "path": "/usr/bin/iverilog",
+                "sha256": "a6071e4b4a68feafca0c8ee0e6aa275eee9a43a108c62801cfd1eca6eab6d8a3",
+                "version_output": "Icarus Verilog version 12.0 (stable) ()\n\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Preprocessor version 12.0 (stable) ()\n\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed "
+              },
+              "riscv_gcc": {
+                "exit_code": 0,
+                "path": "/usr/bin/riscv64-unknown-elf-gcc",
+                "sha256": "8c7a8599f3e56e6abe23d4d54025f77ad03efd4113394eac16f1d6060b626974",
+                "version_output": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+              },
+              "systemc": {
+                "exit_code": 0,
+                "path": "/usr/bin/pkgconf",
+                "sha256": "7e8152db1b0c7e49d47b4b82a70dc9997b557951c5d4d938b0e7f208ce9eb10b",
+                "version_output": "2.3.4\n"
+              },
+              "verilator": {
+                "exit_code": 0,
+                "path": "/usr/bin/verilator",
+                "sha256": "4c6292ab82e57b7f34ab26dbae86ba9c494bacfb088b6ff34be93c553d1301b1",
+                "version_output": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)\n"
+              },
+              "wellen": {
+                "version": "0.25.7"
+              },
+              "yosys": {
+                "exit_code": 0,
+                "path": "/usr/bin/yosys",
+                "sha256": "88c0a12bb814a1a8716b1ae10b482e35d3005ed558e1f5f626b3dc983ea3abd0",
+                "version_output": "Yosys 0.33 (git sha1 2584903a060)\n"
+              }
+            },
+            "user": "opensoc"
+          },
+          "worker_hashes": {
+            "reference/register_bank/rtl/register_bank.sv": "a8e897d5e4f9c738a7230a9813c84c3b1cd42817ca85864fe6f6223eaaf4b4f1",
+            "workers/reference_soc/monitor.v": "d4919da3861921f4486714ed8dabb61364c85218d9760cedd6cc6e7d34351eaf",
+            "workers/reference_soc/oracles.py": "d9bd47e078703a2befccad86036e86a21c40ce9d5cc57b85f9f6afc20d2132aa",
+            "workers/runtime/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "workers/runtime/compliance.py": "956ac5cee1e3ca5a0a8b75d4188835fed8982b7a04a0e4066aee9948226c7219",
+            "workers/runtime/control_acceptance.py": "f7d62c79a103593058b222775331ac82eee3b430e693d7276972496baf9e99a5",
+            "workers/runtime/gem5_config.py": "c1b8711bc725d3b588fc86bd159d6103995cac825aad34d64284eecac7c76b0b",
+            "workers/runtime/gem5_workload.S": "d6e4cd54f8f161383613805f7122abb2404e6c5d9f7f5800f48b877630748ac8",
+            "workers/runtime/lock.py": "ca165eb64dba1f7ec4777c561c99147f5d38bf797e1fa2e4e9833cb8f1f789ba",
+            "workers/runtime/probe.py": "01fda07978774177c149f9d95dbf85e4fc388d325f521b688e591d1498febbbb",
+            "workers/runtime/reference_top.v": "5b0a9a6c50f3db65653f663fb463b237848a3ecd057cb7ca411e9c362a32b027",
+            "workers/runtime/register_compare.v": "046998b0fb3ec0b95689fb463fb4309a0b18734f2e46bef7292987e345c36633",
+            "workers/runtime/runner.py": "63022e89236e00832f48ad692960b37d4dffce6fd1e515ed617349683387d9ab",
+            "workers/runtime/tlm_reference.cpp": "130a9487ede09c94a6db07661743c7c9b95be26e36a3ef4506b3d24028cdca1a",
+            "workers/runtime/tlm_trace.py": "39ca7b244e545d74227da0f5cbabe00425a75b6e3fc88d10ebe302079dbfd87c",
+            "workers/runtime/wave.py": "192edf9e97cbe293aeb93786adb997b87b5fbbb69b927c96557927549aea353a",
+            "workers/runtime/wave_acceptance.py": "f113d5258203530d95dea7eb9321437b21e2e9a9c866c6f910c080cb1d59c39d"
+          }
+        },
+        "stages": [
+          {
+            "details": {
+              "error": "RuntimeError: CANCELLED"
+            },
+            "id": "systemc_build",
+            "started_at": "2026-10-22T07:55:00.707245+00:00",
+            "state": "FAIL"
+          }
+        ],
+        "state": "CANCELLED"
+      },
+      "kind": "job.state",
+      "run_id": "runtime-90bf7798b1eb45ff",
+      "schema_version": "1.0",
+      "seq": 9
+    }
+  ]
+}

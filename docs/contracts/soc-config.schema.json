@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensoc.local/contracts/1.0/soc-config.schema.json",
+  "title": "OpenSoC soc-config 1.0 DRAFT",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "address_width": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 128
+    },
+    "lane": {
+      "enum": [
+        "rtl_standalone",
+        "rtl_cpu_soc",
+        "gem5_arch",
+        "gem5_hybrid"
+      ]
+    },
+    "instances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ip_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "interfaces": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "protocol": {
+                  "enum": [
+                    "AXI4-Lite",
+                    "AXI4",
+                    "APB",
+                    "TL-UL",
+                    "TileLink",
+                    "generic_tlm",
+                    "pin"
+                  ]
+                },
+                "role": {
+                  "enum": [
+                    "initiator",
+                    "target"
+                  ]
+                },
+                "data_width": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                "address_width": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                "clock_domain": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "provenance": {
+                  "enum": [
+                    "EXTRACTED",
+                    "INFERRED",
+                    "REVIEWED",
+                    "VERIFIED",
+                    "UNAVAILABLE"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0
+                },
+                "adapter_contract": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "id",
+                "protocol",
+                "role",
+                "data_width",
+                "address_width",
+                "clock_domain",
+                "provenance",
+                "evidence_ids",
+                "adapter_contract"
+              ]
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "id",
+          "ip_id",
+          "interfaces"
+        ]
+      },
+      "minItems": 0
+    },
+    "address_regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "instance_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "base": {
+            "type": "string",
+            "pattern": "^0x[0-9a-fA-F]+$"
+          },
+          "size": {
+            "type": "string",
+            "pattern": "^0x[0-9a-fA-F]+$"
+          },
+          "alignment": {
+            "type": "string",
+            "pattern": "^0x[0-9a-fA-F]+$"
+          }
+        },
+        "required": [
+          "id",
+          "instance_id",
+          "base",
+          "size",
+          "alignment"
+        ]
+      },
+      "minItems": 0
+    },
+    "connections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "from": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "instance_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "interface_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "instance_id",
+              "interface_id"
+            ]
+          },
+          "to": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "instance_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "interface_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "instance_id",
+              "interface_id"
+            ]
+          },
+          "adapter_contract": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "from",
+          "to",
+          "adapter_contract"
+        ]
+      },
+      "minItems": 0
+    },
+    "clocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "frequency_hz": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "id",
+          "frequency_hz"
+        ]
+      },
+      "minItems": 0
+    },
+    "resets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "clock_domain": {
+            "type": "string",
+            "minLength": 1
+          },
+          "active_low": {
+            "type": "boolean"
+          },
+          "asynchronous": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "clock_domain",
+          "active_low",
+          "asynchronous"
+        ]
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "project_id",
+    "revision",
+    "address_width",
+    "lane",
+    "instances",
+    "address_regions",
+    "connections",
+    "clocks",
+    "resets"
+  ]
+}

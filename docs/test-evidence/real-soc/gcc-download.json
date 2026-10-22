@@ -1,0 +1,8 @@
+{
+  "url": "https://github.com/xpack-dev-tools/riscv-none-elf-gcc-xpack/releases/download/v15.2.0-1/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64.zip",
+  "release": "v15.2.0-1",
+  "sha256": "85ef714dacd273b1dadf4af4892774520ac01915bfa6da816a56e7e41591e09e",
+  "bytes": 465438733,
+  "expected_hash_source": "GitHub release asset digest",
+  "scope": "External portable tools for feasibility only; no redistribution/license clearance implied"
+}

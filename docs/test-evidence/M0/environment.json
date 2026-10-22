@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-22T05:05:49.372Z",
+  "platform": "win32",
+  "arch": "x64",
+  "node": "v24.22.0",
+  "probes": [
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "status": "AVAILABLE",
+      "exit_code": 0,
+      "stdout": "git version 2.56.0.windows.1\n",
+      "stderr": "",
+      "error": null
+    },
+    {
+      "command": [
+        "python",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "EACCES"
+    },
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "EACCES"
+    },
+    {
+      "command": [
+        "verilator",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "ENOENT"
+    },
+    {
+      "command": [
+        "fusesoc",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "ENOENT"
+    },
+    {
+      "command": [
+        "scons",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "ENOENT"
+    },
+    {
+      "command": [
+        "g++",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "ENOENT"
+    },
+    {
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "ENOENT"
+    },
+    {
+      "command": [
+        "cargo",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "ENOENT"
+    },
+    {
+      "command": [
+        "riscv32-unknown-elf-gcc",
+        "--version"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": null,
+      "stdout": "",
+      "stderr": "",
+      "error": "ENOENT"
+    },
+    {
+      "command": [
+        "docker",
+        "version",
+        "--format",
+        "{{json .Server}}"
+      ],
+      "status": "UNAVAILABLE",
+      "exit_code": 1,
+      "stdout": "null\n",
+      "stderr": "WARNING: Error loading config file: open C:\\Users\\win\\.docker\\config.json: Access is denied.\nfailed to connect to the docker API at npipe:////./pipe/docker_engine; check if the path is correct and if the daemon is running: open //./pipe/docker_engine: The system cannot find the file specified.\n",
+      "error": null
+    }
+  ]
+}

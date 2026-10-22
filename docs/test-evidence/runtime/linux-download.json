@@ -1,0 +1,8 @@
+{
+  "url": "https://cloud-images.ubuntu.com/daily/server/wsl/releases/noble/current/ubuntu-noble-wsl-amd64-24.04lts.rootfs.tar.gz",
+  "sha256": "2a790896740b14d637dbdc583cce1ba081ac53b9e9cdb46dc09a2f73abbd9934",
+  "bytes": 356736729,
+  "checksum_source": "https://cloud-images.ubuntu.com/daily/server/wsl/releases/noble/current/SHA256SUMS",
+  "signature_verified": false,
+  "scope": "Dedicated development WSL; not a certified OS sandbox"
+}

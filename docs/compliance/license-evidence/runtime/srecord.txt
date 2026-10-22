@@ -1,0 +1,47 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: SRecord
+Upstream-Contact: Scott Finneran <scottfinneran@yahoo.com.au>
+Source: http://srecord.sourceforge.net/download.html
+
+Files: *
+Copyright: 2014 Scott Finneran <scottfinneran@yahoo.com.au>
+           1998-2014 Peter Miller <pmiller@opensource.org.au>
+           2009 David Kozub <zub@linux.fjfi.cvut.cz>
+License: GPL-3+
+
+Files: srecord/output/file/forth.*
+       man/man5/srec_forth.5
+Copyright: 2008-2010 Peter Miller <pmiller@opensource.org.au>
+           2008 Torsten Sadowski <tsadowski@gmx.net>
+License: GPL-3+
+
+Files: srecord/output/file/vhdl.*
+Copyright: 2000 Hendrik De Vloed <hendrik.devloed@ugent.be>
+           2006-2010 Peter Miller <pmiller@opensource.org.au>
+License: GPL-3+
+
+Files: debian/*
+Copyright: 2018 Fabian Wolff <fabi.wolff@arcor.de>
+           2008-2011 Fathi Boudra <fabo@debian.org>
+           2002-2006 Stephen M Moraco <stephen@debian.org>
+           2001-2002 Vince Mulhollon <vlm@debian.org>
+           2000 Raphael Bossek <bossekr@debian.org>
+License: GPL-3+
+
+License: GPL-3+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or (at
+ your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see
+ <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.

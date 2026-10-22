@@ -1,0 +1,4 @@
+Finished writing testbench.trace.
+TRAP after 24 clock cycles
+ERROR!
+D:\git-repo\OpenSoC-Studio\artifacts\real-soc\20261022T063044Z\source\testbench.v:271: $stop called at 1340000 (1ps)

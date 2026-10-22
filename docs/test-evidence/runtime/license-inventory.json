@@ -1,0 +1,78 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "scope": "External tools and sources; firmware runtime/OS/full per-file closure remains open",
+  "native": [
+    {
+      "name": "verilator",
+      "source": "/usr/share/doc/verilator/copyright",
+      "sha256": "87dfb7c7cf9880193f02a6200f28b32158b268daf549c7bf21488088413684a7",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "iverilog",
+      "source": "/usr/share/doc/iverilog/copyright",
+      "sha256": "08a7c438f641b5dca0e234b1a18063796ee3ef8e5d902d72dc9ec799b8c17525",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "yosys",
+      "source": "/usr/share/doc/yosys/copyright",
+      "sha256": "c84b7de4e8193fb1e1dc247990d2ef3cec6c1ce82a64458a3280f7cfca856fff",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "gcc-riscv64-unknown-elf",
+      "source": "/usr/share/doc/gcc-riscv64-unknown-elf/copyright",
+      "sha256": "45057e6e6afab8ce84af71d066c5c6cbdfdf27c1c5c39fa521d4137dbae59202",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "binutils-riscv64-unknown-elf",
+      "source": "/usr/share/doc/binutils-riscv64-unknown-elf/copyright",
+      "sha256": "a81bdd422c2c015deca84bf6ad249bf0d7d19885fc01d1894463291b0b7313e1",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "libsystemc",
+      "source": "/usr/share/doc/libsystemc/copyright",
+      "sha256": "6fac02fb58058d2a9d5be128d26ba4325452350f9578b58a0f561da3e10950a2",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "libsystemc-dev",
+      "source": "/usr/share/doc/libsystemc-dev/copyright",
+      "sha256": "6fac02fb58058d2a9d5be128d26ba4325452350f9578b58a0f561da3e10950a2",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "scons",
+      "source": "/usr/share/doc/scons/copyright",
+      "sha256": "5b65208258cfca0462e12a22581feace767670db2ef6ff01d04397ea952a25d0",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "srecord",
+      "source": "/usr/share/doc/srecord/copyright",
+      "sha256": "014c30019ea4d912abbca634e9cb06090cba9167f0bf34d7b8f33fddd1beb121",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "libelf-dev",
+      "source": "/usr/share/doc/libelf-dev/copyright",
+      "sha256": "657e078ed1e718b57ca839cdc38bb93196a0009488bea43cd0f429e7531530fa",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "ibex",
+      "source": "/opt/opensoc/src/ibex/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "gem5",
+      "source": "/opt/opensoc/src/gem5/LICENSE",
+      "sha256": "bafc693ac009ddd37e3a96da715eaab7b97891cbf4f800a4a9d93394dfde989c",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

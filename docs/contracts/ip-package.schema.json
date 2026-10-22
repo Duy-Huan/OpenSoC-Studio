@@ -1,0 +1,357 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensoc.local/contracts/1.0/ip-package.schema.json",
+  "title": "OpenSoC ip-package 1.0 DRAFT",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "ip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_.-]+:[a-zA-Z0-9_.-]+:[a-zA-Z0-9_.-]+:[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "repository": {
+              "type": "string",
+              "minLength": 1
+            },
+            "commit": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "content_sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "fileset": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            },
+            "top": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "repository",
+            "commit",
+            "content_sha256",
+            "fileset",
+            "top"
+          ]
+        },
+        "rights": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "license_expression": {
+              "type": "string",
+              "minLength": 1
+            },
+            "redistribution": {
+              "enum": [
+                "allowed",
+                "forbidden",
+                "review_required"
+              ]
+            }
+          },
+          "required": [
+            "license_expression",
+            "redistribution"
+          ]
+        },
+        "ports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "direction": {
+                "enum": [
+                  "input",
+                  "output",
+                  "inout"
+                ]
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              },
+              "provenance": {
+                "enum": [
+                  "EXTRACTED",
+                  "INFERRED",
+                  "REVIEWED",
+                  "VERIFIED",
+                  "UNAVAILABLE"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "direction",
+              "width",
+              "provenance"
+            ]
+          },
+          "minItems": 0
+        },
+        "interfaces": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "protocol": {
+                "enum": [
+                  "AXI4-Lite",
+                  "AXI4",
+                  "APB",
+                  "TL-UL",
+                  "TileLink",
+                  "generic_tlm",
+                  "pin"
+                ]
+              },
+              "role": {
+                "enum": [
+                  "initiator",
+                  "target"
+                ]
+              },
+              "data_width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              },
+              "address_width": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              },
+              "clock_domain": {
+                "type": "string",
+                "minLength": 1
+              },
+              "provenance": {
+                "enum": [
+                  "EXTRACTED",
+                  "INFERRED",
+                  "REVIEWED",
+                  "VERIFIED",
+                  "UNAVAILABLE"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0
+              },
+              "adapter_contract": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "protocol",
+              "role",
+              "data_width",
+              "address_width",
+              "clock_domain",
+              "provenance",
+              "evidence_ids",
+              "adapter_contract"
+            ]
+          },
+          "minItems": 0
+        },
+        "clocks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "frequency_hz": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "id",
+              "frequency_hz"
+            ]
+          },
+          "minItems": 0
+        },
+        "resets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "clock_domain": {
+                "type": "string",
+                "minLength": 1
+              },
+              "active_low": {
+                "type": "boolean"
+              },
+              "asynchronous": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "clock_domain",
+              "active_low",
+              "asynchronous"
+            ]
+          },
+          "minItems": 0
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "level": {
+                "enum": [
+                  "EXTRACTED",
+                  "INFERRED",
+                  "REVIEWED",
+                  "VERIFIED",
+                  "UNAVAILABLE"
+                ]
+              },
+              "claim": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contract_revision": {
+                "type": "string",
+                "minLength": 1
+              },
+              "toolchain_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "artifact_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "id",
+              "level",
+              "claim",
+              "contract_revision",
+              "toolchain_sha256",
+              "artifact_sha256"
+            ]
+          },
+          "minItems": 0
+        },
+        "status": {
+          "enum": [
+            "DRAFT",
+            "REVIEWED",
+            "VALIDATED",
+            "PUBLISHED"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "display_name",
+        "source",
+        "rights",
+        "ports",
+        "interfaces",
+        "clocks",
+        "resets",
+        "evidence",
+        "status"
+      ]
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ip_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "content_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "ip_id",
+          "content_sha256"
+        ]
+      },
+      "minItems": 0
+    },
+    "license_audit": {
+      "enum": [
+        "REVIEW_REQUIRED",
+        "APPROVED",
+        "REJECTED"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "ip",
+    "dependencies",
+    "license_audit"
+  ]
+}

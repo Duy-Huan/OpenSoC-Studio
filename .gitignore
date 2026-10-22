@@ -1,0 +1,16 @@
+node_modules/
+.tools/
+.opensoc/
+apps/web/dist/
+test-results/
+playwright-report/
+.pytest_cache/
+.venv/
+__pycache__/
+.cache/
+artifacts/
+*.fst
+*.vcd
+*.elf
+*.vmem
+

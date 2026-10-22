@@ -1,0 +1,338 @@
+{
+  "scope": "External Linux toolchain Python dependencies; not API runtime redistribution clearance",
+  "components": [
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "wheel": "annotated_types-0.8.0-py3-none-any.whl",
+      "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "argcomplete",
+      "version": "3.7.2",
+      "wheel": "argcomplete-3.7.2-py3-none-any.whl",
+      "sha256": "6029205678bdd9c1c728a155f5f9ecf5812393f969eef58807641a2bc2aa5b19",
+      "license_expression": null,
+      "license_metadata": "Apache Software License",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "wheel": "attrs-26.1.0-py3-none-any.whl",
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "babel",
+      "version": "2.18.0",
+      "wheel": "babel-2.18.0-py3-none-any.whl",
+      "sha256": "e2b422b277c2b9a9630c1d7903c2a00d0830c409c59ac8cae9081c92f1aeba35",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "cli_exit_tools",
+      "version": "1.2.7",
+      "wheel": "cli_exit_tools-1.2.7-py3-none-any.whl",
+      "sha256": "bdfdd8b0613e49faf6f4d8695328ce815858f980ea8ab2ddb69867ca1970e551",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "wheel": "click-8.5.0-py3-none-any.whl",
+      "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "edalize",
+      "version": "0.6.8",
+      "wheel": "edalize-0.6.8-py3-none-any.whl",
+      "sha256": "e8d8287358dac914fa68d388c468dd62eb39f7d1402c95bdb89f85a73593c0ba",
+      "license_expression": null,
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "fastjsonschema",
+      "version": "2.22.2",
+      "wheel": "fastjsonschema-2.22.2-py3-none-any.whl",
+      "sha256": "0fb3915616adac85ccfdd737d26be1089845d2019819505b42d39888458f74d4",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "fusesoc",
+      "version": "2.4.3",
+      "wheel": "fusesoc-2.4.3-py3-none-any.whl",
+      "sha256": "9ab4a82a5b7d4decbeb8f76049673a1b0806732ab8f807fee285bbc0452b3dc3",
+      "license_expression": null,
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "wheel": "jinja2-3.1.6-py3-none-any.whl",
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "license_expression": null,
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "jsonschema2md",
+      "version": "1.7.0",
+      "wheel": "jsonschema2md-1.7.0-cp312-cp312-linux_x86_64.whl",
+      "sha256": "b87cd66a1cc6748541eb7a3775288dbd887a3cdbdb60a0c1523d635bc2f65450",
+      "license_expression": "Apache-2.0",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "junit-xml",
+      "version": "1.9",
+      "wheel": "junit_xml-1.9-py2.py3-none-any.whl",
+      "sha256": "ec5ca1a55aefdd76d28fcc0b135251d156c7106fa979686a4b48d62b761b4732",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "lib_detect_testenv",
+      "version": "3.0.6",
+      "wheel": "lib_detect_testenv-3.0.6-py3-none-any.whl",
+      "sha256": "f01e65f40b0510da31e4e6c051520dd65bd06eae651a33bda7a6a8ccfd552c06",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "Mako",
+      "version": "1.4.3",
+      "wheel": "mako-1.4.3-py3-none-any.whl",
+      "sha256": "723296007c870bfd6b3f0c3230dba7198096e5269297ebf5e4eff9e7ffa39d4f",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "Markdown",
+      "version": "3.11.2",
+      "wheel": "markdown-3.11.2-py3-none-any.whl",
+      "sha256": "f80390747a2a0ff2ba54da074ce4f862f72a6685f608cd2637b646a6d83993f5",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "wheel": "markdown_it_py-4.2.0-py3-none-any.whl",
+      "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a",
+      "license_expression": null,
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.4",
+      "wheel": "markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "8e124f974786f831d6043728e38296969d3579db8896fe004682f5758e613581",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "wheel": "mdurl-0.1.2-py3-none-any.whl",
+      "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+      "license_expression": null,
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "okonomiyaki",
+      "version": "3.0.0",
+      "wheel": "okonomiyaki-3.0.0-py2.py3-none-any.whl",
+      "sha256": "a5193286e9db0ded2d3ae80d7c3ebb9923bca89e94ba03d612bb9c2c0948cd77",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "wheel": "packaging-26.3-py3-none-any.whl",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "pathlib3x",
+      "version": "2.0.3",
+      "wheel": "pathlib3x-2.0.3-py3-none-any.whl",
+      "sha256": "6948a0675b4b7b392ba8d89866aade48a935626bceb979381d4cd3c6b423878d",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "portalocker",
+      "version": "4.4.1",
+      "wheel": "portalocker-4.4.1-py3-none-any.whl",
+      "sha256": "4a184e8fb1adb37e078ca1804f1b7c0d8e73d81136790b1ad695ae8f1c8be291",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.1",
+      "wheel": "pydantic-2.14.1-py3-none-any.whl",
+      "sha256": "9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.1",
+      "wheel": "pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "93ba4e9d8210d941c200431a56b2c0400b131865947903937ed3ec5404307d2e",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "wheel": "pygments-2.21.0-py3-none-any.whl",
+      "sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9",
+      "license_expression": "BSD-2-Clause",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "wheel": "pyparsing-3.3.3-py3-none-any.whl",
+      "sha256": "ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "pywellen",
+      "version": "0.25.7",
+      "wheel": "pywellen-0.25.7-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "967658f10ebc938952c7ac914af617bd74ceed3759cf787ba43b3537c89363d8",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "wheel": "pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0",
+      "wheel": "rich-15.0.0-py3-none-any.whl",
+      "sha256": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "rich-click",
+      "version": "1.9.9",
+      "wheel": "rich_click-1.9.9-py3-none-any.whl",
+      "sha256": "365e7a9d0adb42e41ea832a0a12e02c44c079a26536dee688125eb9814f97274",
+      "license_expression": null,
+      "license_metadata": "MIT License\n        \n        Copyright (c) 2022 Phil Ewels\n        \n        Permission is hereby granted, free of charge, to any person obtaining a copy\n        of this software and associated documentation files (the \"Software\"), to deal\n        in the Software without restriction, including without limitation the rights\n        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n        copies of the Software, and to permit persons to whom the Software is\n        furnished to do so, subject to the following conditions:\n        \n        The above copyright notice and this permission notice shall be included in all\n        copies or substantial portions of the Software.\n        \n        THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n        SOFTWARE.\n        ",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "simplesat",
+      "version": "0.9.2",
+      "wheel": "simplesat-0.9.2-py3-none-any.whl",
+      "sha256": "dde724538ccc5bddfdf57aa366cfb0cec0e3cae8c5d1ebc56f4cfb47948a8f97",
+      "license_expression": null,
+      "license_metadata": "BSD-3-Clause",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "wheel": "six-1.17.0-py2.py3-none-any.whl",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "svg.py",
+      "version": "1.10.0",
+      "wheel": "svg_py-1.10.0-py3-none-any.whl",
+      "sha256": "54c7470347d5d79b30d059584a4f449da08b462903e8ce262981338bab755560",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "typeguard",
+      "version": "2.13.3",
+      "wheel": "typeguard-2.13.3-py3-none-any.whl",
+      "sha256": "5e3e3be01e887e7eafae5af63d1f36c849aaa94e3a0112097312aabfa16284f1",
+      "license_expression": null,
+      "license_metadata": "MIT",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "wheel": "typing_extensions-4.16.0-py3-none-any.whl",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "license_expression": "PSF-2.0",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "wheel": "typing_inspection-0.4.4-py3-none-any.whl",
+      "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+      "license_expression": "MIT",
+      "license_metadata": null,
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "name": "typing-utils",
+      "version": "0.1.0",
+      "wheel": "typing_utils-0.1.0-py3-none-any.whl",
+      "sha256": "6bd26f3d38a5dd526ca3a59f0a451ccb59bcee9dc829c872dd6c0aae4ec8bbef",
+      "license_expression": null,
+      "license_metadata": "Apache License 2.0",
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

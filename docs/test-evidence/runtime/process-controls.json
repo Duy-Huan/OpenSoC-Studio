@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "control": "cancel",
+      "status": "PASS",
+      "reason": "CANCELLED",
+      "child_pid": 11717,
+      "child_reaped": true,
+      "command": {
+        "stage": "process_controls",
+        "label": "cancel",
+        "argv": [
+          "/opt/opensoc/venv/bin/python",
+          "-c",
+          "import subprocess,sys,time; p=subprocess.Popen([sys.executable,'-c','import time;time.sleep(30)']); print(p.pid,flush=True); time.sleep(30)"
+        ],
+        "exit_code": -9,
+        "elapsed_s": 0.428,
+        "reason": "CANCELLED",
+        "stdout": "artifacts/runtime/control-1792653407156571619/logs/000-cancel.stdout.log",
+        "stderr": "artifacts/runtime/control-1792653407156571619/logs/000-cancel.stderr.log",
+        "stdout_sha256": "361451560c7f2d2871d2590188a0645734b8ecc89787ac9e75bd59c953245a27",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "control": "timeout",
+      "status": "PASS",
+      "reason": "TIMED_OUT",
+      "child_pid": 11719,
+      "child_reaped": true,
+      "command": {
+        "stage": "process_controls",
+        "label": "timeout",
+        "argv": [
+          "/opt/opensoc/venv/bin/python",
+          "-c",
+          "import subprocess,sys,time; p=subprocess.Popen([sys.executable,'-c','import time;time.sleep(30)']); print(p.pid,flush=True); time.sleep(30)"
+        ],
+        "exit_code": -9,
+        "elapsed_s": 0.544,
+        "reason": "TIMED_OUT",
+        "stdout": "artifacts/runtime/control-1792653407156571619/logs/001-timeout.stdout.log",
+        "stderr": "artifacts/runtime/control-1792653407156571619/logs/001-timeout.stderr.log",
+        "stdout_sha256": "eb25667f71fe3ffb8650db460e156cd699d42567e6d47acb0308fc0bd6ef8e9f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}

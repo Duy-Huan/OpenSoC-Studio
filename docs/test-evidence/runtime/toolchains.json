@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "distro": "OpenSoC-Runtime",
+  "user": "opensoc",
+  "tools": {
+    "verilator": {
+      "version_output": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)\n",
+      "exit_code": 0,
+      "path": "/usr/bin/verilator",
+      "sha256": "4c6292ab82e57b7f34ab26dbae86ba9c494bacfb088b6ff34be93c553d1301b1"
+    },
+    "iverilog": {
+      "version_output": "Icarus Verilog version 12.0 (stable) ()\n\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Preprocessor version 12.0 (stable) ()\n\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed ",
+      "exit_code": 0,
+      "path": "/usr/bin/iverilog",
+      "sha256": "a6071e4b4a68feafca0c8ee0e6aa275eee9a43a108c62801cfd1eca6eab6d8a3"
+    },
+    "yosys": {
+      "version_output": "Yosys 0.33 (git sha1 2584903a060)\n",
+      "exit_code": 0,
+      "path": "/usr/bin/yosys",
+      "sha256": "88c0a12bb814a1a8716b1ae10b482e35d3005ed558e1f5f626b3dc983ea3abd0"
+    },
+    "riscv_gcc": {
+      "version_output": "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "exit_code": 0,
+      "path": "/usr/bin/riscv64-unknown-elf-gcc",
+      "sha256": "8c7a8599f3e56e6abe23d4d54025f77ad03efd4113394eac16f1d6060b626974"
+    },
+    "g++": {
+      "version_output": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+      "exit_code": 0,
+      "path": "/usr/bin/x86_64-linux-gnu-g++-13",
+      "sha256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769"
+    },
+    "systemc": {
+      "version_output": "2.3.4\n",
+      "exit_code": 0,
+      "path": "/usr/bin/pkgconf",
+      "sha256": "7e8152db1b0c7e49d47b4b82a70dc9997b557951c5d4d938b0e7f208ce9eb10b"
+    },
+    "fusesoc": {
+      "version_output": "2.4.3\n",
+      "exit_code": 0,
+      "path": "/opt/opensoc/venv/bin/fusesoc",
+      "sha256": "bd964c4b497c6a38febd4514a0b1bb80af7938a5ad6b7e86b0d931b9e35512ab"
+    },
+    "wellen": {
+      "version": "0.25.7"
+    },
+    "gem5": {
+      "path": "/opt/opensoc/src/gem5/build/RISCV/gem5.opt",
+      "available": true,
+      "sha256": "f04805e5bb9314b9dde043597be1bcecb7e96f87a6bf4a74db0853ce146f0e79",
+      "version_output": "Build information:\n\ngem5 version 24.1.0.3\ncompiled Oct 22 2026 07:38:56\nbuild options:\n    ARMLMD_LICENSE_COUNT = 0\n    ARMLMD_LICENSE_FILE = \n    BATCH = False\n    BATCH_CMD = \n    BUILD_GPU = False\n    BUILD_ISA = True\n    BUILD_TLM = False\n    HAVE_CAPSTONE = False\n    HAVE_DEPRECATED_NAMESPACE = True\n    HAVE_FENV = True\n    HAVE_HDF5 = True\n    HAVE_KVM = True\n    HAVE_PERF_ATTR_EXCLUDE_HOST = 1\n    HAVE_PNG = True\n    HAVE_POSIX_CLOCK = True\n    HAVE_PROTOBUF = True\n    HAVE_SYSTEMC = True\n    HAVE_TUNTAP = True\n    HAVE_VALGRIND = False\n    KVM_ISA = x86\n    M5_BUILD_CACHE = \n    MAXCORE_HOME = \n    NUMBER_BITS_PER_SET = 64\n    PROTOCOL = MI_example\n    PVLIB_FLAVOR = \n    PVLIB_HOME = \n    RUBY = True\n    RUBY_PROTOCOL_CHI = False\n    RUBY_PROTOCOL_GPU_VIPER = False\n    RUBY_PROTOCOL_Garnet_standalone = False\n    RUBY_PROTOCOL_MESI_Three_Level = False\n    RUBY_PROTOCOL_MESI_Three_Level_HTM = False\n    RUBY_PROTOCOL_MESI_Two_Level = False\n    RUBY_PROTOCOL_MI_example = True\n    RUBY_PROTOCOL_MOESI_AMD_Base = False\n    RUBY_PROTOCOL_MOESI_CMP_directory = False\n    RUBY_PROTOCOL_MOESI_CMP_token = False\n    RUBY_PROTOCOL_MOESI_hammer = False\n    RUBY_PROTOCOL_MSI = False\n    SIMGEN = \n    SLICC_HTML = False\n    TARGET_GPU_ISA = \n    USE_ARM_FASTMODEL = False\n    USE_ARM_ISA = False\n    USE_CAPSTONE = False\n    USE_EFENCE = False\n    USE_KVM = True\n    USE_MIPS_ISA = False\n    USE_MULTIPLE_PROTOCOLS = True\n    USE_POSIX_CLOCK = False\n    USE_POWER_ISA = False\n    USE_RISCV_ISA = True\n    USE_SPARC_ISA = False\n    USE_SYSTEMC = True\n    USE_TEST_OBJECTS = False\n    USE_X86_ISA = False\n    VEGA_GPU_ISA = False\n\n",
+      "probe_exit_code": 0
+    },
+    "ibex": {
+      "path": "/opt/opensoc/src/ibex/build/lowrisc_ibex_ibex_simple_system_0/sim-verilator/Vibex_simple_system",
+      "available": true,
+      "sha256": "70738e3279254170bd2afb293831e59b45e3be5ebff3b174071dad8dc2660756"
+    }
+  },
+  "scope": "Prepared tools; each runtime still requires workflow acceptance"
+}

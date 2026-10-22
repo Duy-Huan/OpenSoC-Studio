@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Reader semantic fixtures, not hardware simulation",
+  "checks": [
+    "exact ticks beyond JS Number precision",
+    "X/Z preserved",
+    "missing initial sample stays unavailable",
+    "bounded transition windows",
+    "automatic window fits real changes",
+    "unknown signal rejection"
+  ]
+}

@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="PicoRV32 actual RTL regression" tests="7" failures="0"><testcase name="baseline" /><testcase name="axi_delays_seed_default" /><testcase name="axi_delays_seed_17" /><testcase name="singleport_register_file" /><testcase name="replay" /><testcase name="counter_reset" /><testcase name="corrupt_firmware_negative_control" /></testsuite>

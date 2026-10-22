@@ -1,0 +1,178 @@
+Collecting fusesoc==2.4.3
+  Downloading fusesoc-2.4.3-py3-none-any.whl.metadata (6.5 kB)
+Collecting mako
+  Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+Collecting packaging
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting junit-xml
+  Downloading junit_xml-1.9-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting pathlib3x
+  Downloading pathlib3x-2.0.3-py3-none-any.whl.metadata (19 kB)
+Collecting typing-utils
+  Downloading typing_utils-0.1.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting typeguard~=2.13
+  Downloading typeguard-2.13.3-py3-none-any.whl.metadata (3.6 kB)
+Collecting portalocker
+  Downloading portalocker-4.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting svg.py
+  Downloading svg_py-1.10.0-py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: edalize>=0.4.1 in /opt/opensoc/venv/lib/python3.12/site-packages (from fusesoc==2.4.3) (0.6.8)
+Requirement already satisfied: pyparsing>=2.3.1 in /opt/opensoc/venv/lib/python3.12/site-packages (from fusesoc==2.4.3) (3.3.3)
+Requirement already satisfied: pyyaml>=6.0 in /opt/opensoc/venv/lib/python3.12/site-packages (from fusesoc==2.4.3) (6.0.3)
+Requirement already satisfied: simplesat>=0.9.1 in /opt/opensoc/venv/lib/python3.12/site-packages (from fusesoc==2.4.3) (0.9.2)
+Requirement already satisfied: fastjsonschema in /opt/opensoc/venv/lib/python3.12/site-packages (from fusesoc==2.4.3) (2.22.2)
+Collecting jsonschema2md (from fusesoc==2.4.3)
+  Downloading jsonschema2md-1.7.0.tar.gz (20 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: argcomplete in /opt/opensoc/venv/lib/python3.12/site-packages (from fusesoc==2.4.3) (3.7.2)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/opensoc/venv/lib/python3.12/site-packages (from mako) (3.0.4)
+Requirement already satisfied: six in /opt/opensoc/venv/lib/python3.12/site-packages (from junit-xml) (1.17.0)
+Collecting click (from pathlib3x)
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting cli-exit-tools (from pathlib3x)
+  Downloading cli_exit_tools-1.2.7-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: Jinja2>=3 in /opt/opensoc/venv/lib/python3.12/site-packages (from edalize>=0.4.1->fusesoc==2.4.3) (3.1.6)
+Requirement already satisfied: attrs>=17.4.0 in /opt/opensoc/venv/lib/python3.12/site-packages (from simplesat>=0.9.1->fusesoc==2.4.3) (26.1.0)
+Requirement already satisfied: okonomiyaki>=0.16.6 in /opt/opensoc/venv/lib/python3.12/site-packages (from simplesat>=0.9.1->fusesoc==2.4.3) (3.0.0)
+Collecting lib-detect-testenv (from cli-exit-tools->pathlib3x)
+  Downloading lib_detect_testenv-3.0.6-py3-none-any.whl.metadata (15 kB)
+Collecting babel<3,>=2 (from jsonschema2md->fusesoc==2.4.3)
+  Downloading babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting markdown<4,>=3 (from jsonschema2md->fusesoc==2.4.3)
+  Downloading markdown-3.11.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting rich-click>=1.9.9 (from lib-detect-testenv->cli-exit-tools->pathlib3x)
+  Downloading rich_click-1.9.9-py3-none-any.whl.metadata (7.4 kB)
+Collecting rich>=12 (from rich-click>=1.9.9->lib-detect-testenv->cli-exit-tools->pathlib3x)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=12->rich-click>=1.9.9->lib-detect-testenv->cli-exit-tools->pathlib3x)
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=12->rich-click>=1.9.9->lib-detect-testenv->cli-exit-tools->pathlib3x)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12->rich-click>=1.9.9->lib-detect-testenv->cli-exit-tools->pathlib3x)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading fusesoc-2.4.3-py3-none-any.whl (60 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.9/60.9 kB 1.1 MB/s eta 0:00:00
+Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 3.7 MB/s eta 0:00:00
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Downloading junit_xml-1.9-py2.py3-none-any.whl (7.1 kB)
+Downloading pathlib3x-2.0.3-py3-none-any.whl (25 kB)
+Downloading typing_utils-0.1.0-py3-none-any.whl (10 kB)
+Downloading typeguard-2.13.3-py3-none-any.whl (17 kB)
+Downloading portalocker-4.4.1-py3-none-any.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.7/129.7 kB 6.3 MB/s eta 0:00:00
+Downloading svg_py-1.10.0-py3-none-any.whl (15 kB)
+Downloading cli_exit_tools-1.2.7-py3-none-any.whl (11 kB)
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 8.7 MB/s eta 0:00:00
+Downloading babel-2.18.0-py3-none-any.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 29.8 MB/s eta 0:00:00
+Downloading markdown-3.11.2-py3-none-any.whl (114 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.3/114.3 kB 19.4 MB/s eta 0:00:00
+Downloading lib_detect_testenv-3.0.6-py3-none-any.whl (19 kB)
+Downloading rich_click-1.9.9-py3-none-any.whl (71 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.9/71.9 kB 8.7 MB/s eta 0:00:00
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 31.6 MB/s eta 0:00:00
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 13.9 MB/s eta 0:00:00
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 45.4 MB/s eta 0:00:00
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Building wheels for collected packages: jsonschema2md
+  Building wheel for jsonschema2md (pyproject.toml): started
+  Building wheel for jsonschema2md (pyproject.toml): finished with status 'done'
+  Created wheel for jsonschema2md: filename=jsonschema2md-1.7.0-cp312-cp312-linux_x86_64.whl size=31456 sha256=b87cd66a1cc6748541eb7a3775288dbd887a3cdbdb60a0c1523d635bc2f65450
+  Stored in directory: /home/opensoc/.cache/pip/wheels/32/24/0e/044705bb83e5fc372441e356a18254c55707986f4b654fcfd0
+Successfully built jsonschema2md
+Installing collected packages: typing-utils, typeguard, svg.py, pygments, portalocker, packaging, mdurl, markdown, mako, junit-xml, click, babel, markdown-it-py, jsonschema2md, rich, fusesoc, rich-click, lib-detect-testenv, cli-exit-tools, pathlib3x
+  Attempting uninstall: fusesoc
+    Found existing installation: fusesoc 2.4.7
+    Uninstalling fusesoc-2.4.7:
+      Successfully uninstalled fusesoc-2.4.7
+Successfully installed babel-2.18.0 cli-exit-tools-1.2.7 click-8.5.0 fusesoc-2.4.3 jsonschema2md-1.7.0 junit-xml-1.9 lib-detect-testenv-3.0.6 mako-1.4.3 markdown-3.11.2 markdown-it-py-4.2.0 mdurl-0.1.2 packaging-26.3 pathlib3x-2.0.3 portalocker-4.4.1 pygments-2.21.0 rich-15.0.0 rich-click-1.9.9 svg.py-1.10.0 typeguard-2.13.3 typing-utils-0.1.0
+INFO: Preparing lowrisc:dv:dv_fcov_macros:0
+INFO: Preparing lowrisc:dv:secded_enc:0
+INFO: Preparing lowrisc:dv_verilator:ibex_pcounts:0
+INFO: Preparing lowrisc:dv_verilator:simutil_verilator:0
+INFO: Preparing lowrisc:ibex:ibex_pkg:0.1
+INFO: Preparing lowrisc:prim_generic:ram_1p_pkg:0
+INFO: Preparing lowrisc:prim_generic:ram_2p_pkg:0
+INFO: Preparing lowrisc:prim_generic:rom_pkg:0
+INFO: Preparing lowrisc:prim:util_get_scramble_params:0
+INFO: Preparing lowrisc:prim:util_memload:0
+INFO: Preparing lowrisc:tool:check_tool_requirements:0.1
+INFO: Preparing lowrisc:dv_verilator:memutil_dpi:0
+INFO: Preparing lowrisc:lint:common:0.1
+INFO: Preparing lowrisc:prim_generic:ram_1r1w_pkg:0
+INFO: Preparing lowrisc:dv_verilator:memutil_verilator:0
+INFO: Preparing lowrisc:prim:assert:0.1
+INFO: Preparing lowrisc:prim:cipher_pkg:0.1
+INFO: Preparing lowrisc:prim_generic:and2:0
+INFO: Preparing lowrisc:prim_generic:buf:0
+INFO: Preparing lowrisc:prim_generic:clock_buf:0
+INFO: Preparing lowrisc:prim_generic:clock_gating:0
+INFO: Preparing lowrisc:prim_generic:flop:0
+INFO: Preparing lowrisc:prim_generic:flop_no_rst:0
+INFO: Preparing lowrisc:prim_generic:prim_pkg:0
+INFO: Preparing lowrisc:prim_generic:usb_diff_rx:0
+INFO: Preparing lowrisc:prim_generic:xnor2:0
+INFO: Preparing lowrisc:prim_generic:xor2:0
+INFO: Preparing lowrisc:prim:pad_wrapper_pkg:0
+INFO: Preparing lowrisc:prim:secded:0.1
+INFO: Preparing lowrisc:ibex:ibex_icache:0.1
+INFO: Preparing lowrisc:ibex:ibex_tracer:0.1
+INFO: Preparing lowrisc:prim:cdc_rand_delay:0
+INFO: Preparing lowrisc:prim:cipher:0
+INFO: Preparing lowrisc:prim:count:0
+INFO: Preparing lowrisc:prim_generic:clock_mux2:0
+INFO: Preparing lowrisc:prim_generic:pad_attr:0
+INFO: Preparing lowrisc:prim_generic:pad_wrapper:0
+INFO: Preparing lowrisc:prim_generic:ram_1p:0
+INFO: Preparing lowrisc:prim_generic:ram_1r1w:0
+INFO: Preparing lowrisc:prim_generic:ram_2p:0
+INFO: Preparing lowrisc:prim_generic:rom:0
+INFO: Preparing lowrisc:prim:lfsr:0.1
+INFO: Preparing lowrisc:prim:mubi_pkg:0.1
+INFO: Preparing lowrisc:prim:sec_anchor:0.1
+INFO: Preparing lowrisc:prim:util:0.1
+INFO: Preparing pulp-platform:common_cells:common_cells:0.1
+INFO: Preparing lowrisc:ibex:sim_shared:0
+INFO: Preparing lowrisc:prim_generic:clock_inv:0
+INFO: Preparing lowrisc:prim_generic:flop_2sync:0
+INFO: Preparing lowrisc:prim_generic:flop_en:0
+INFO: Preparing lowrisc:prim:mubi:0.1
+INFO: Preparing lowrisc:prim:onehot:0
+INFO: Preparing lowrisc:prim:ram_1p_adv:0.1
+INFO: Preparing lowrisc:ibex:ibex_core:0.1
+INFO: Preparing lowrisc:prim:fifo:0
+INFO: Preparing lowrisc:prim_generic:clock_div:0
+INFO: Preparing lowrisc:prim_generic:rst_sync:0
+INFO: Preparing lowrisc:prim:ram_1p_scr:0.1
+INFO: Preparing lowrisc:prim_generic:all:0.1
+INFO: Preparing lowrisc:ibex:ibex_top:0.1
+INFO: Preparing lowrisc:ibex:ibex_top_tracing:0.1
+INFO: Preparing lowrisc:ibex:ibex_simple_system_core:0
+INFO: Preparing lowrisc:ibex:ibex_simple_system:0
+INFO: Setting up project
+WARNING: This backend is deprecated and will eventually be removed. Please migrate to the flow API instead.  See https://edalize.readthedocs.io/en/latest/ref/migrations.html#migrating-from-the-tool-api-to-the-flow-api for more details.
+INFO: Running pre_build script check_tool_requirements
+INFO: Tool verilator present: Sufficiently recent version (found 5.020; needed 4.210)
+INFO: Tool edalize present: Sufficiently recent version (found 0.6.8; needed 0.2.0)
+INFO: Building simulation model
+Entering directory '/opt/opensoc/src/ibex/build/lowrisc_ibex_ibex_simple_system_0/sim-verilator'
+Leaving directory '/opt/opensoc/src/ibex/build/lowrisc_ibex_ibex_simple_system_0/sim-verilator'
+make: Entering directory '/opt/opensoc/src/ibex/examples/sw/simple_system/hello_test'
+riscv64-unknown-elf-gcc -march=rv32imc_zicsr_zifencei -mabi=ilp32 -static -mcmodel=medany -Wall -g -Os -fvisibility=hidden -nostdlib -nostartfiles -ffreestanding  -MMD -c -I/opt/opensoc/src/ibex/examples/sw/simple_system/common -o /opt/opensoc/src/ibex/examples/sw/simple_system/common/simple_system_common.o /opt/opensoc/src/ibex/examples/sw/simple_system/common/simple_system_common.c
+riscv64-unknown-elf-gcc -march=rv32imc_zicsr_zifencei -mabi=ilp32 -static -mcmodel=medany -Wall -g -Os -fvisibility=hidden -nostdlib -nostartfiles -ffreestanding  -MMD -c -I/opt/opensoc/src/ibex/examples/sw/simple_system/common -o hello_test.o hello_test.c
+riscv64-unknown-elf-gcc -march=rv32imc_zicsr_zifencei -mabi=ilp32 -static -mcmodel=medany -Wall -g -Os -fvisibility=hidden -nostdlib -nostartfiles -ffreestanding  -MMD -c -I/opt/opensoc/src/ibex/examples/sw/simple_system/common -o /opt/opensoc/src/ibex/examples/sw/simple_system/common/crt0.o /opt/opensoc/src/ibex/examples/sw/simple_system/common/crt0.S
+riscv64-unknown-elf-gcc -march=rv32imc_zicsr_zifencei -mabi=ilp32 -static -mcmodel=medany -Wall -g -Os -fvisibility=hidden -nostdlib -nostartfiles -ffreestanding  -T /opt/opensoc/src/ibex/examples/sw/simple_system/common/link.ld /opt/opensoc/src/ibex/examples/sw/simple_system/common/simple_system_common.o hello_test.o  /opt/opensoc/src/ibex/examples/sw/simple_system/common/crt0.o -o hello_test.elf 
+/usr/lib/gcc/riscv64-unknown-elf/13.2.0/../../../riscv64-unknown-elf/bin/ld: warning: hello_test.elf has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objcopy -O binary hello_test.elf hello_test.bin
+srec_cat hello_test.bin -binary -offset 0x0000 -byte-swap 4 -o hello_test.vmem -vmem
+make: Leaving directory '/opt/opensoc/src/ibex/examples/sw/simple_system/hello_test'
